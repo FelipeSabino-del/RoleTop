@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RoleTop</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header>
+            <div id="teste">
+                <nav>
+                    <ul>
+                        <li class="linha">Home</li>
+                        <li class="linha">O Role</li>
+                        <li class="linha">Espaço</li>
+                        <li class="linha">Nossas vantagens</li>
+                        <li class="linha">Cadastro/login</li>
+                        <li id="linha-contato">Contato</li>
+                    </ul>    
+                </nav>
+                <section id="logo-area">
+                  <img id="logo" src="img/logo.png" alt="Logo" title="Logo">
+                </section>
+              </div>
+    </header>
+    <main>
+        <div>
+                <div class="slideshow-container">
+                  <div class="mySlides1" >
+                    <img src="img/banner_batizado2.jpg" style="width:100%" height="960px">
+                  </div>
+                
+                  <div class="mySlides1">
+                    <img src="img/banner_casamento2.jpg" style="width:100%" height="960px">
+                  </div>
+                
+                  <div class="mySlides1">
+                    <img src="img/banner_corporativo.jpg" style="width:100%" height="960px">
+                  </div>
+                
+                  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                </div>
+                
+                <div class="slideshow-container">
+                  <div class="mySlides2">
+                    <img src="img/1.jpg" style="width:100%" height="960px">
+                  </div>
+                
+                  <div class="mySlides2">
+                    <img src="img/2.jpg" style="width:100%" height="960px">
+                  </div>
+                
+                  <div class="mySlides2">
+                    <img src="img/3.jpg" style="width:100%" height="960px">
+                  </div>
+                
+                  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                </div>
+        </div>
+
+        <div id="cardapio">
+          <h2>Cardápio de eventos</h2>
+        </div>
+
+
+
+
+    </main>
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+        var slideIndex = [1,1];
+        var slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+        
+        function plusSlides(n, no) {
+          showSlides(slideIndex[no] += n, no);
+        }
+        
+        function showSlides(n, no) {
+          var i;
+          var x = document.getElementsByClassName(slideId[no]);
+          if (n > x.length) {slideIndex[no] = 1}    
+          if (n < 1) {slideIndex[no] = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          x[slideIndex[no]-1].style.display = "block";  
+        }
+
+
+  </script>
+
+  <script>
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+    ​
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("teste").style.padding = "30px 10px";
+        document.getElementById("logo").style.fontSize = "25px";
+        document.getElementById("teste").style.backgroundColor = "blue";
+      } else {
+        document.getElementById("teste").style.padding = "80px 10px";
+        document.getElementById("logo").style.fontSize = "35px";
+        document.getElementById("teste").style.backgroundColor = "transparent";
+      }
+    }
+ 
+  </script>
+</html>

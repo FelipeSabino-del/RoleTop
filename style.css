@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* &*&*&*&*&*&*&*&*&*& HEADER *&*&*&*&*&*&*&*&*&* */
+
+#teste{
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 1920px;
+
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+#logo-area{
+    height: 100px;
+
+}
+
+
+#logo-area img {
+    height: 10em;
+    margin: 15px 0 0 45px;
+    transition: 0.4s;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 1.3em;
+    height: 2.5em;
+    align-items: center;
+    justify-content: flex-start;
+    color:white;
+    padding: 1em;
+    border: 2px solid white;
+    text-shadow: -1px -1px 0 black,
+                  1px -1px 0 black,
+                 -1px  1px 0 black,
+                  1px  1px 0 black;
+    margin: 1em 0.5em 0 0;
+
+}
+
+.linha{
+    border-right: 2px solid white;
+    padding: 0 1em 0 1em;
+}
+
+#linha-contato{
+    padding: 0 0 0 1em;
+}
+
+/* &*&*&*&*&*&*&*&*&*& HEADER *&*&*&*&*&*&*&*&*&* */
+
+/* &*&*&*&*&*&*&*&* SCRIPT *&*&*&*&*&*&*&* */
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none; top: 0;}
+img {vertical-align: middle; z-index: -1;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1920px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/* &*&*&*&*&*&*&*&* SCRIPT - FIM *&*&*&*&*&*&*&* */
+
+
+@media screen and (max-width: 580px) {
+  #teste {
+    padding: 20px 10px !important;
+  }
+  #logo{
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}

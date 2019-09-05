@@ -1,0 +1,80 @@
+Um sistema para uma empresa dona de um espaço para eventos, "Rolê top".
+
+DICAS PARA DEFINIR
+>Identifique necessidades indicadas por verbos na entrevista
+>Anotar todas a ideias que possam agregar ao site (não são necessidades)
+
+
+PERGUNTAS
+@@espaço para historico de clientes importantes
+
+
+CARACTERÍSTICAS DO LOCAL
+-Um evento por dia
+-Sistema arcaico de agendamento
+-Faixa etária 16-30
+-Diversidade sobre eventos com base na faixa etária
+-Concorrência de média-longa distãncia com o villa country
+-150mx40m
+-Flexibilidade consideravel com horários, porém dentro das leis
+-Preço mínimo de 10K
+-Serviço opicional de luz e som
+-Clientes costumam perguntar o básico e óbvio
+-Clientes fiéis
+-Equipe de segurança responsabilidade do cliente
+-Serviço de limpeza oferecido
+-Acesso para deficientes
+-Área para fumantes
+-Arcondicionado na parte principal
+-Local fechado
+-Até três dias antes o cancelamento é gratuito, após isso 50% do valor fica na casa
+-Termos e condições serão enviados
+-Não aceitam bilheteria
+-Vão enviar as perguntas mais frequentes dos clientes 
+-Vão enviar tabela de preços
+-Adms acesso a todos os eventos e ato de confirmar ou negar
+-Adm histórico dos clientes
+-Parte para destacar caracteristicas positivas do local (marketing)
+
+DESEJOS DO CLIENTE
+*adicionar as redes sociais
+*faq
+*chat automático
+*localização
+**area de login
+*atrair o publico jovem
+*plano fidelidade
+**calendario de evento
+**contato no agendamento
+*cancelamento digital através do login
+*solicitar oorçamento precisa ter login: nome do evento, data, serviços opcionais desejados, forma de pagamento e descrição do evento.
+*no login precisa do nome, cpf/cnpj e telefone.
+*planta no site
+*adms acesso a todos os eventos e ato de confirmar ou negar
+*adm histórico dos clientes
+*parte para destacar caracteristicas positivas do local (marketing)
+
+
+
+IDEIAS
+#solicitar orçamento
+#cardapio interativo de eventos 
+#paginas caracteristicas para cada tipo de evento
+#imagens interativas
+#area para adms
+#pagina para login criado
+#video
+#transições temáticas
+#chatbot
+#fotos das equipes oferecidas
+#area de feedback
+#frases de efeito
+#pagina com historia do lugar
+#area para criar convite
+#nome diferenciado para quem se cadastrar e realizar algum evento (tiers para plano fidelidade) ex: VIP
+#horario de atendimento
+#mapa
+#recomende
+
+
+
