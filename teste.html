@@ -1,79 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="all.css">
-    <title>
-        asfd
-    </title>
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;
+margin: 0;
+padding: 0;}
 
-  <style>
-  img {
-    max-width: 100%;
-
-    }       
-.cycle-slideshow {
-    width: 100%;
-    max-width: 2000px;
-
-    }
-
-
-nav {
-    position: fixed;
-    text-align: center;
-    width: 100%;
-    height: 45px;
-    background-color: black;
-    opacity: 0.8;
-
-    }
-nav a {
-    display: inline-block;
-    text-decoration: none;
-    font-family: verdana;
-    font-size: 14px;
-    color: rgb(239,239,239);
-    margin: 15px 32px 0 32px;
-
-
-    }
-nav a:hover {
-    color: pink;
+#navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
 }
-  </style>
+
+#go li {
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
 
 
+#navbar #go {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+
+#teste{
+    color: rgba(0, 0, 0, 1)
+}
+
+#go{
+    display: flex;
+    list-style-type: none;
+    height: 2.5em;
+    align-items: center;
+    justify-content: flex-start;
+    color:white;
+    border: 2px solid white;
+    text-shadow: -1px -1px 0 black,
+                  1px -1px 0 black,
+                 -1px  1px 0 black,
+                  1px  1px 0 black;
+    margin: 1em 0.5em 0 0;
+    position: fixed;
+    top: 0;
+  right: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  padding: 90px 10px;
+
+    
+}
+
+#logo-area{
+    height: 100px;
+}
+
+
+#logo-area img {
+    height: 10em;
+    margin: 15px 0 0 45px;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+</style>
 </head>
-
 <body>
 
 
-    <nav>
-        <a href="#">Logo</a>
-        <a href="#">Home</a>
-        <a href="#">Projects</a> 
-        <a href="#">Colections</a>
-        <a href="#">Philosophy</a>
-        <a href="#">Contact</a>
-        <a href="#">Facebook</a>
-    </nav>
+    
+    <div id="navbar">
+        <nav>
+            <ul id="go">
+                <li class="linha">Home</li>
+                <li class="linha">O Role</li>
+                <li class="linha">Espaço</li>
+                <li class="linha">Nossas vantagens</li>
+                <li class="linha">Cadastro/login</li>
+                <li id="linha-contato">Contato</li>
+            </ul>
+        </nav>
+        <section  id="logo-area"> 
+        <img id="logo" src="img/logo.png" alt="Logo" title="Logo">
+    </section>
+    </div>
+    
+    <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+            <p><b>This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.</b></p>
+            <p>Scroll down this frame to see the effect!</p>
+            <p>Scroll to the top to remove the effect.</p>
+            <p><b>Note:</b> We have also made the navbar responsive, resize the browser window to see the effect.</p>
+            <p>Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div id="teste">
+    
+                <ul>
+                    <li class="linha">Home</li>
+                    <li class="linha">O Role</li>
+                    <li class="linha">Espaço</li>
+                    <li class="linha">Nossas vantagens</li>
+                    <li class="linha">Cadastro/login</li>
+                    <li id="linha-contato">Contato</li>
+                </ul>    
+    
+          </div>
+        
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
 
-
-
-
-<div class="cycle-slideshow">
-    <img src="img/1.jpg" alt="blabla">
-    <img src="img/2.jpg" alt="blabla">
-    <img src="img/3.jpg" alt="blabla">
-</div>    
-
-
-
-
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "80px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
 
 </body>
 </html>

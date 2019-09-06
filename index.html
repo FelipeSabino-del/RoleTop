@@ -11,7 +11,7 @@
     <header>
             <div id="teste">
                 <nav>
-                    <ul>
+                    <ul id="go">
                         <li class="linha">Home</li>
                         <li class="linha">O Role</li>
                         <li class="linha">Espaço</li>
@@ -77,17 +77,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 <script>
         var slideIndex = [1,1];
         var slideId = ["mySlides1", "mySlides2"]
@@ -108,25 +97,22 @@
           }
           x[slideIndex[no]-1].style.display = "block";  
         }
-
-
   </script>
 
-  <script>
-      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+<script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
     window.onscroll = function() {scrollFunction()};
-    ​
+    
     function scrollFunction() {
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("teste").style.padding = "30px 10px";
-        document.getElementById("logo").style.fontSize = "25px";
-        document.getElementById("teste").style.backgroundColor = "blue";
+        document.getElementById("teste").style.padding = "45px 10px";
+        document.getElementById("go").style.fontSize = "17px";
+        // document.getElementById("logo").style.width = "100px";
       } else {
-        document.getElementById("teste").style.padding = "80px 10px";
-        document.getElementById("logo").style.fontSize = "35px";
-        document.getElementById("teste").style.backgroundColor = "transparent";
+        document.getElementById("teste").style.padding = "120px 10px";
+        document.getElementById("go").style.fontSize = "20.8px";
+        // document.getElementById("logo").style.width = "150px";
       }
     }
- 
-  </script>
+    </script>
 </html>

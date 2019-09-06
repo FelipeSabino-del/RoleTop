@@ -12,7 +12,11 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 1920px;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.4s;
+  padding-bottom: 15em;
+  height: 0;
 
 }
 
@@ -24,22 +28,15 @@ nav{
   transition: 0.4s;
 }
 
-#logo-area{
-    height: 100px;
-
+#teste #go {
+  transition: 0.4s;
 }
 
 
-#logo-area img {
-    height: 10em;
-    margin: 15px 0 0 45px;
-    transition: 0.4s;
-}
-
-nav ul{
-    display: flex;
-    list-style-type: none;
-    font-size: 1.3em;
+#go{
+  display: flex;
+  list-style-type: none;
+  font-size: 1.3em;
     height: 2.5em;
     align-items: center;
     justify-content: flex-start;
@@ -47,21 +44,49 @@ nav ul{
     padding: 1em;
     border: 2px solid white;
     text-shadow: -1px -1px 0 black,
-                  1px -1px 0 black,
+    1px -1px 0 black,
                  -1px  1px 0 black,
                   1px  1px 0 black;
-    margin: 1em 0.5em 0 0;
+                  margin: 1em 0.5em 0 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: 0.4s;
+    
+  }
+#logo-area{
+    height: 100px;
+}
 
+
+#logo{
+    height: 10em;
+    margin: 15px 0 0 45px;
+    transition: 0.4s;
+}
+
+.curto{
+  width: 100px;
+  height: 5em;
 }
 
 .linha{
-    border-right: 2px solid white;
-    padding: 0 1em 0 1em;
+  border-right: 2px solid white;
+  padding: 0 1em 0 1em;
 }
 
 #linha-contato{
     padding: 0 0 0 1em;
 }
+
+@media screen and (max-width: 580px) {
+  #teste {
+    padding: 20px 10px !important;
+  }
+
+  .slideshow-container{
+    padding: auto;
+  }
 
 /* &*&*&*&*&*&*&*&*&*& HEADER *&*&*&*&*&*&*&*&*&* */
 
@@ -73,7 +98,7 @@ img {vertical-align: middle; z-index: -1;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1920px;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -107,16 +132,3 @@ img {vertical-align: middle; z-index: -1;}
 }
 
 /* &*&*&*&*&*&*&*&* SCRIPT - FIM *&*&*&*&*&*&*&* */
-
-
-@media screen and (max-width: 580px) {
-  #teste {
-    padding: 20px 10px !important;
-  }
-  #logo{
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-}
