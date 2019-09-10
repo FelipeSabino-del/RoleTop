@@ -21,11 +21,11 @@
           <li class="linha"><a href="index.html#">Home</a></li>
           <li class="linha"><a href="historia.html">O Role</a></li>
           <li class="linha"><a href="index.html">Espaço</a></li>
-          <li class="linha"><a href="index.html#eventos">Nossos eventos</a></li>
+          <li class="linha"><a href="#cardapio">Nossos eventos</a></li>
           <li class="linha open-button" onclick="openForm()">Cadastro/login</li>
           <li id="linha-contato"><a href="index.html#copy">Contato</a></li>
           <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars" style="font-size: 70px"></i>
           </a>
         </li>
         </ul>
@@ -46,7 +46,7 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Digite sua senha" name="psw" required>
 
-        <button type="submit" class="btn">Login</button>
+        <a href="usuario.html"><button type="submit" class="btn">Login</button></a> 
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         <p>Não tem login? Faça seu <a href="cadastro.html">cadastro aqui</a></p>
       </form>
@@ -77,7 +77,7 @@
       </div>
 
       <div class="slideshow-container">
-        <div class="mySlides2">
+        <div class="mySlides2" id="scroll">
           <img src="img/1.jpg" style="width:100%" height="960px">
         </div>
 
@@ -106,9 +106,9 @@
 
       <div class="btn-group">
         <a href="social.html"><button class="button">Social</button></a>
-        <button class="button">Casamento</button>
-        <button class="button">Universitário</button>
-        <button class="button">Corporativo</button>
+        <a href="casamento.html"> <button class="button">Casamento</button></a>
+        <a href="universitario.html"><button class="button">Universitário</button></a> 
+        <a href="corporativo.html"> <button class="button">Corporativo</button></a>
       </div>
       <br>
       <br>
@@ -151,7 +151,9 @@
       <br>
       <br>
       <br>
+      <div id="feed-buttom">
       <button class="button-feedback" onclick="openForm()"><span>Deixe seu Feedback</span></button>
+      </div>
     </div>
     <hr>
 
@@ -166,9 +168,9 @@
 
       <ul>
         <li><a href="index.html#">Home</a></li>
-        <li>História</li>
-        <li>Espaço</li>
-        <li>FAQ</li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="espaço.html">Espaço</a></li>
+        <li><a href="">FAQ</a></li>
       </ul>
     </div>
     <hr>

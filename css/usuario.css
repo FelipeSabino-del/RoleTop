@@ -36,16 +36,15 @@ nav{
 }
 
 #teste{
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(93, 0, 109);
   z-index: 9999;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-  overflow: hidden;
-  transition: 0.4s;
-  padding-bottom: 13em;
+  padding-bottom: 7.5em;
   height: 0;
+  border-bottom: 2px solid #ffc600;
 }
 
 .topnav .icon {
@@ -56,11 +55,10 @@ nav{
   transition: 0.4s;
 }
 
-
 #go{
   display: flex;
   list-style-type: none;
-  font-size: 1.3em;
+  font-size: 17px;
     height: 2.5em;
     align-items: center;
     justify-content: flex-start;
@@ -75,13 +73,11 @@ nav{
     position: fixed;
     top: 0;
     right: 0;
-    transition: 0.4s;
   }
 
 #logo{
-    height: 10em;
+    height: 5em;
     margin: 15px 0 0 45px;
-    transition: 0.4s;
 }
 
 /* POPUP LOGIN */
@@ -105,28 +101,28 @@ nav{
 
 /* The popup form - hidden by default */
 .form-popup {
-  display: none;
-  position: fixed;
-  bottom: 20%;
-  right: 32.5%;
-  border: 3px outset black;
-  z-index: 9999999;
-  text-align: center;
-  color: #ffc600;
+    display: none;
+    position: fixed;
+    bottom: 20%;
+    right: 32.5%;
+    border: 3px outset black;
+    z-index: 9999999;
+    text-align: center;
+    color: #ffc600;
 }
 
 .form-popup a{
-  text-decoration: underline;
-  color: azure;
-  font-size: 1.5em;
-  text-align: center;
+text-decoration: underline;
+color: azure;
+font-size: 1.5em;
+text-align: center;
 }
 
 /* Add styles to the form container */
 .form-container {
   max-width: 40em;
   padding: 1em;
-  background-color: black;
+  background-color:black;
 }
 
 /* Full-width input fields */
@@ -170,102 +166,116 @@ nav{
 /* &*&*&*&*&*&*&*&*&*& HEADER - FIM *&*&*&*&*&*&*&*&*&* */
 
 /* +=+=+=+=+=+=+=+=+=+ MAIN - INICIO +=+=+=+=+=+=+=+=+=+ */
-#cardapio{
-    background-color: #7D0093;
-}
-
-#cardapio h2{
-  text-align: center;
-}
-
-.btn-group .button {
-  background-color: rgb(29, 29, 29);
-  border: 1px solid rgb(85, 85, 85);
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.btn-group{
-  display: flex;
-  justify-content: space-around;
+main{
+    background-color: rgb(125, 0, 147);
 }
 
 
-.btn-group, .button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+
+main h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 5em;
 }
 
-.btn-group .button:hover {
-  background-color: ghostwhite;
-  color: black;
+#line{
+    margin-top: 7em;
 }
 
-#jef{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-}
+#double-col  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+ }
 
-#jef p{
-  font-size: 3em;
-}
+ #double-col input {
+    height: 2.5em;
+    width: 45%;
+ }
 
-#comentario{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+ input[type=submit] {
+    margin-left: 47%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 2%;
+ }
 
-textarea{
-  resize: none;
-  box-sizing: border-box;
-}
+ input[type=submit]:hover{
+     background-color: #ffc600;
+     color: black;
+ }
 
-#feed-buttom{
-  display: flex;
-  justify-content: center;
-}
+ #double-line {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+ }
 
-.button-feedback{
-  text-align: center;
-  width: 300px;
-  height: 100px;
-  background-color: lightgray;
-  color: black;
-  border: 2px ridge black;
-  font-size: 1.75em;
-  cursor: pointer;
-  transition: all 0.5s;
-}
+ .container {
+    display: block;
+    position: relative;
+    padding-right: 5em;
+    margin-top: 0px;
+    margin-left: 25px;
+    font-size: 22px;
+    user-select: none;
+ }
 
-.button-feedback span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
+ input[type="checkbox"] {
+    cursor: pointer;
+ }
 
-.button-feedback span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
+ #double-line  a {
+    font-size: 22px;
+    cursor: pointer;
+ }
 
-.button-feedback:hover span {
-  padding-right: 25px;
-}
+ #register {
+    text-align: center;
+    padding: 1em;
+ }
 
-.button-feedback:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+ #register a {
+    padding: 0 5px;
+    cursor: pointer;
+    text-decoration: underline black;
+ }
+
+ #back {
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(black, #7d0093, #ffc600); /* Standard syntax (must be last) */
+    z-index: -1;
+    height: 62.9em;
+ }
+ input[type="email"] {
+    border: 1px solid black;
+    border-radius: 5px;
+ }
+
+ input[type="password"] {
+    border: 1px solid black;
+    border-radius: 5px;
+ }
+
+ #double-col label {
+   margin-top: 2%;
+ }
+
+ input[type="date"] {
+    border: 1px solid black;
+    border-radius: 5px;
+ }
+
+ input[type="text"] {
+    border: 1px solid black;
+    border-radius: 5px;
+ }
 
 /* +=+=+=+=+=+=+=+=+=+ MAIN - FIM +=+=+=+=+=+=+=+=+=+ */
 /* @#@#@#@#@#@#@#@#@#@ FOOTER - INICIO #$#$#$#$#$#$#$ */
@@ -287,7 +297,7 @@ footer{
  #nav-rod ul li {
   list-style-type: none;
   padding: 2px;
-  color: #ffc600;
+  color: rgb(255, 198, 0);
  }
 
  #nav-rod li a{
@@ -369,8 +379,6 @@ img {vertical-align: middle; z-index: -1;}
 
 /* &*&*&*&*&*&*&*&* SLIDESHOW - FIM *&*&*&*&*&*&*&* */
 
-/* #$#$#$#$##$##$#$##$ MEDIA - INICIO $##$#$#$#$#$##$#$# */
-
 @media screen and (max-width: 600px) {
   #teste a.icon {
     float: right;
@@ -434,4 +442,3 @@ img {vertical-align: middle; z-index: -1;}
   }
 }
   /* #$#$#$#$##$#$#$# MEDIA - FIM #$#$#$#$#$#$#$##$ */
-  

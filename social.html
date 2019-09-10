@@ -6,27 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RoleTop</title>
     <link rel="stylesheet" href="css/social.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <!-- &*&*&*&*&*&*&*&*&*& HEADER - INICIO *&*&*&*&*&*&*&*&*&* -->
 
     <header>
-            <div id="teste">
-                <nav>
-                    <ul id="go">
-                        <li class="linha"><a href="index.html#">Home</a></li>
-                        <li class="linha"><a href="historia.html">O Role</a></li>
-                        <li class="linha"><a href="index.html">Espaço</a></li>
-                        <li class="linha"><a href="index.html#eventos">Nossos eventos</a></li>
-                        <li class="linha open-button" onclick="openForm()">Cadastro/login</li>
-                        <li id="linha-contato"><a href="#copy">Contato</a></li>
-                    </ul>    
-                </nav>
-                <section id="logo-area">
-                    <a href="index.html#"><img id="logo" src="img/logo.png" alt="Logo" title="Logo"></a>
-                </section>
-              </div>
+      <div id="teste">
+        <nav>
+          <ul id="go" class="topnav">
+            <li class="linha"><a href="index.html#">Home</a></li>
+            <li class="linha"><a href="historia.html">O Role</a></li>
+            <li class="linha"><a href="index.html">Espaço</a></li>
+            <li class="linha"><a href="#cardapio">Nossos eventos</a></li>
+            <li class="linha open-button" onclick="openForm()">Cadastro/login</li>
+            <li id="linha-contato"><a href="index.html#copy">Contato</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars" style="font-size: 70px"></i>
+            </a>
+          </li>
+          </ul>
+        </nav>
+        <section id="logo-area">
+          <a href="index.html"><img id="logo" src="img/logo.png" alt="Logo" title="Logo"></a>
+        </section>
+      </div>
 
               <!-- &*&* POPUP LOGIN *&*&* -->
               <div class="form-popup" id="myForm">
@@ -39,7 +44,7 @@
                       <label for="psw"><b>Password</b></label>
                       <input type="password" placeholder="Digite sua senha" name="psw" required>
                   
-                      <button type="submit" class="btn">Login</button>
+                      <a href="usuario.html"><button type="submit" class="btn">Login</button></a>
                       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                       <p>Não tem login? Faça seu <a href="cadastro.html">cadastro aqui</a></p>
                     </form>
@@ -63,10 +68,16 @@
 <br>
 <br>
         <div id="social">
- 
+          <img src="img/Festa-1.png" alt="Evento Social">
         </div>
 <br>
 <br>
+      <div id="feed-buttom">
+      <button class="button-feedback" onclick="openForm()"><span>Faça o seu Rolê</span></button>
+      </div>
+<br>
+<br>
+<hr>
         </main>
 <!-- &*&*&*&*&*&*&*&*&*& MAIN - FIM *&*&*&*&*&*&*&*&*&* -->          
 
@@ -78,9 +89,9 @@
 
                     <ul>
                         <li><a href="index.html#">Home</a></li>
-                        <li>História</li>
-                        <li>Espaço</li>
-                        <li>FAQ</li>
+                        <li><a href="historia.html">História</a></li>
+                        <li><a href="espaço.html">Espaço</a></li>
+                        <li><a href="">FAQ</a></li>
                       </ul>
             </div>
 <hr>
@@ -125,4 +136,15 @@
       document.getElementById("myForm").style.display = "none";
     }
     </script>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("go");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
 </html>

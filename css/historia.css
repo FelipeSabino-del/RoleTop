@@ -44,7 +44,7 @@ nav{
   width: 100%;
   padding-bottom: 7.5em;
   height: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #ffc600;
 
 }
 
@@ -63,7 +63,7 @@ nav{
     1px -1px 0 black,
                  -1px  1px 0 black,
                   1px  1px 0 black;
-                  margin: 1em 0.5em 0 0;
+    margin: 1em 0.5em 0 0;
     position: fixed;
     top: 0;
     right: 0;
