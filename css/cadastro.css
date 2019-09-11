@@ -379,6 +379,20 @@ img {vertical-align: middle; z-index: -1;}
 
 /* &*&*&*&*&*&*&*&* SLIDESHOW - FIM *&*&*&*&*&*&*&* */
 
+/* #$#$#$#$##$##$#$##$ MEDIA - INICIO $##$#$#$#$#$##$#$# */
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+  .tab, .tabcontent{
+    height: 1100px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #teste a.icon {
     float: right;
@@ -386,12 +400,16 @@ img {vertical-align: middle; z-index: -1;}
   }
 
   #logo{
-    margin: 0.25em;
+    margin: 0.3em;
     height: 5em;
   }
 
   .linha, #linha-contato {
     display: none;
+  }
+
+  .form-popup{
+    right: 0;
   }
 }
 
@@ -407,13 +425,14 @@ img {vertical-align: middle; z-index: -1;}
     display: block;
     text-align: center;
   }
+
   #go{
     display: flex;
     flex-direction: column;
     border: none;
   }
 
-  .linha{
+  .linha, #linha-contato{
     border-right: none;
     font-size: 35px
   }
@@ -425,14 +444,37 @@ img {vertical-align: middle; z-index: -1;}
   #linha-contato{
     padding: 0; 
   }
+  #copy{
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #logo-pe{
+    padding-right: 0em;
+  }
+
+  #contato{
+    padding: 2em 0;
+  }
+
+  #icon-rodape img{
+    transform: translateX(0%);
+    align-items: center;
+  }
+  iframe{
+    width: 100%;
+    padding-top: 2em;
+  }
 }
 
 @media screen and (max-width: 580px) {
   #teste {
     padding: 20px 10px !important;
-  }
-  #logo{
-    padding-bottom: 5em;
   }
 }
 

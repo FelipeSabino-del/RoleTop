@@ -101,28 +101,28 @@ nav{
 
 /* The popup form - hidden by default */
 .form-popup {
-    display: none;
-    position: fixed;
-    bottom: 20%;
-    right: 32.5%;
-    border: 3px outset black;
-    z-index: 9999999;
-    text-align: center;
-    color: #ffc600;
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  right: 32.5%;
+  border: 3px outset black;
+  z-index: 9999999;
+  text-align: center;
+  color: #ffc600;
 }
 
 .form-popup a{
-text-decoration: underline;
-color: azure;
-font-size: 1.5em;
-text-align: center;
+  text-decoration: underline;
+  color: azure;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 /* Add styles to the form container */
 .form-container {
   max-width: 40em;
   padding: 1em;
-  background-color:black;
+  background-color: black;
 }
 
 /* Full-width input fields */
@@ -326,6 +326,20 @@ img {vertical-align: middle; z-index: -1;}
 
 /* &*&*&*&*&*&*&*&* SLIDESHOW - FIM *&*&*&*&*&*&*&* */
 
+/* #$#$#$#$##$##$#$##$ MEDIA - INICIO $##$#$#$#$#$##$#$# */
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+  .tab, .tabcontent{
+    height: 1100px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #teste a.icon {
     float: right;
@@ -333,12 +347,16 @@ img {vertical-align: middle; z-index: -1;}
   }
 
   #logo{
-    margin: 0.25em;
+    margin: 0.3em;
     height: 5em;
   }
 
   .linha, #linha-contato {
     display: none;
+  }
+
+  .form-popup{
+    right: 0;
   }
 }
 
@@ -354,6 +372,7 @@ img {vertical-align: middle; z-index: -1;}
     display: block;
     text-align: center;
   }
+
   #go{
     display: flex;
     flex-direction: column;
@@ -362,25 +381,47 @@ img {vertical-align: middle; z-index: -1;}
 
   .linha, #linha-contato{
     border-right: none;
-    font-size: 25px
+    font-size: 35px
   }
   
   #teste{
     height: 7em;
     vertical-align: middle;
-    max-width: 100%;
   }
   #linha-contato{
     padding: 0; 
+  }
+  #copy{
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #logo-pe{
+    padding-right: 0em;
+  }
+
+  #contato{
+    padding: 2em 0;
+  }
+
+  #icon-rodape img{
+    transform: translateX(0%);
+    align-items: center;
+  }
+  iframe{
+    width: 100%;
+    padding-top: 2em;
   }
 }
 
 @media screen and (max-width: 580px) {
   #teste {
     padding: 20px 10px !important;
-  }
-  #logo{
-    padding-bottom: 0;
   }
 }
 

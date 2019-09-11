@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RoleTop</title>
-    <link rel="stylesheet" href="css/espaço.css" type="text/css">
+    <link rel="stylesheet" href="css/adm.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
@@ -61,37 +61,92 @@
 <br>
 <br>
 <br>
-        <div><h1>Nosso espaço</h1></div>
-        <br>
-        <br>
-        <div class="row">
-            <div class="column">
-            <img src="img/e1.png" alt="Entrada" style="width:100%" onclick="myFunction(this);">
-            <p>Entrada</p>
-            </div>
-            <div class="column">
-            <img src="img/e2.png" alt="Pista 1" style="width:100%" onclick="myFunction(this);">
-            <p>Pista 1</p>
-            </div>
-            <div class="column">
-            <img src="img/e3.png" alt="Pista 2" style="width:100%" onclick="myFunction(this);">
-            <p>Pista 2</p>
-            </div>
-            <div class="column">
-            <img src="img/e4.png" alt="Hall" style="width:100%" onclick="myFunction(this);">
-            <p>Hall de entrada</p>
-            </div>
-            <div class="column">
-                <img id="planta-baixa" src="img/planta.png" alt="Planta baixa do local" onclick="myFunction(this);">
-                <p style="transform: translateX(162%); width: 100%;">Planta baixa</p>
-            </div>
+        <div id="user">
+       <p><img src="img/usuario.png" alt="" style="width: 200px; height: 200px"></p><p id="p2">ADM</p>
         </div>
-  
-  <div class="container">
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-    <img id="expandedImg" style="width:100%">
-    <div id="imgtext"></div>
-  </div>
+<br>
+<br>
+<br>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Eventos de usuários</button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">Informações pessoais</button>
+        </div>
+        
+        <div id="London" class="tabcontent">
+            <h2>Dashboard</h2>
+
+            <section id="status-pedidos">
+                <h3>Status dos pedidos</h3>
+                <div id="painel">
+                    <div class="box-status-pedidos aprovados">
+                        <h4>Aprovados</h4>
+                        <p>3</p>
+                    </div>
+                    <div class="box-status-pedidos pendentes">
+                        <h4>Pendentes</h4>
+                        <p>3</p>
+                    </div>
+                    <div class="box-status-pedidos reprovados">
+                        <h4>Reprovados</h4>
+                        <p>3</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="lista-pedidos">
+                <h3>Lista de pedidos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Nome</th>
+                            <th rowspan="2">Tipo de evento</th>
+                            <th colspan="2">Adicionais</th>
+                            <th colspan="2" rowspan="2">Aprovar</th>
+                        </tr>
+                        <tr>
+                            <th><i class="fas fa-hamburger"></i></th>
+                            <th><i class="fas fa-mug-hot"></i></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <p>Eventos registrados no último dia</p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Cesar Sportore</td>
+                            <td>Social</td>
+                            <td>Luz</td>
+                            <td>Sem som</td>
+                            <td><a href="#"><i class="fa fa-check"></i></a></td>
+                            <td><a href="#"><i class="fa fa-times"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Alexandre Fukaya</td>
+                            <td>Corporativo</td>
+                            <td>Luz</td>
+                            <td>Som</td>
+                            <td><a href="#"><i class="fa fa-check"></i></a></td>
+                            <td><a href="#"><i class="fa fa-times"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        
+        
+        
+        <div id="Tokyo" class="tabcontent">
+          <h3>Informações pessoais</h3>
+          <br>
+          <br>
+          <p>DADOS DO USUÁRIO</p>
+        </div>
 <br>
 <br>
 <br>
@@ -156,7 +211,7 @@
     </script>
 
 <script>
-  function myFunction(click) {
+  function myFunction() {
     var x = document.getElementById("go");
     if (x.className === "topnav") {
       x.className += " responsive";
@@ -184,15 +239,5 @@
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
   </script>
-
-<script>
-    function myFunction(imgs) {
-      var expandImg = document.getElementById("expandedImg");
-      var imgText = document.getElementById("imgtext");
-      expandImg.src = imgs.src;
-      imgText.innerHTML = imgs.alt;
-      expandImg.parentElement.style.display = "flex";
-    }
-    </script>
 
 </html>

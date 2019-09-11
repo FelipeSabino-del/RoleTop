@@ -224,7 +224,7 @@ main h1{
   .container {
     position: relative;
     display: none;
-    transform: translateY(-50%);
+    transform: translateY(-20%);
   }
   
   /* Expanding image text */
@@ -357,6 +357,9 @@ img {vertical-align: middle; z-index: -1;}
 
 /* &*&*&*&*&*&*&*&* SLIDESHOW - FIM *&*&*&*&*&*&*&* */
 
+
+/* #$#$#$#$##$##$#$##$ MEDIA - INICIO $##$#$#$#$#$##$#$# */
+
 @media (max-width: 800px) {
   .row {
     flex-direction: column-reverse;
@@ -367,9 +370,6 @@ img {vertical-align: middle; z-index: -1;}
   .tab, .tabcontent{
     height: 1100px;
   }
-  #planta-baixa{
-      max-width: 100%;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -379,7 +379,7 @@ img {vertical-align: middle; z-index: -1;}
   }
 
   #logo{
-    margin: 0.25em;
+    margin: 0.3em;
     height: 5em;
   }
 
@@ -400,6 +400,7 @@ img {vertical-align: middle; z-index: -1;}
     display: block;
     text-align: center;
   }
+
   #go{
     display: flex;
     flex-direction: column;
@@ -418,14 +419,37 @@ img {vertical-align: middle; z-index: -1;}
   #linha-contato{
     padding: 0; 
   }
+  #copy{
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #logo-pe{
+    padding-right: 0em;
+  }
+
+  #contato{
+    padding: 2em 0;
+  }
+
+  #icon-rodape img{
+    transform: translateX(0%);
+    align-items: center;
+  }
+  iframe{
+    width: 100%;
+    padding-top: 2em;
+  }
 }
 
 @media screen and (max-width: 580px) {
   #teste {
     padding: 20px 10px !important;
-  }
-  #logo{
-    padding-bottom: 5em;
   }
 }
 
