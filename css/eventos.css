@@ -182,6 +182,11 @@ main h1{
   text-align: center;
 }
 
+#feed-buttom{
+  display: flex;
+  justify-content: center;
+}
+
 .button-feedback{
   text-align: center;
   width: 300px;
@@ -189,7 +194,6 @@ main h1{
   background-color: lightgray;
   color: black;
   border: 2px ridge black;
-  transform: translateX(268%);
   font-size: 1.75em;
   cursor: pointer;
   transition: all 0.5s;

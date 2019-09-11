@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RoleTop</title>
-    <link rel="stylesheet" href="css/eventos.css" type="text/css">
+    <link rel="stylesheet" href="css/espaço.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
 
@@ -60,25 +61,42 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-        <h1>Social</h1>
-<br>
-<br>
-        <div id="social">
-          <img src="img/Festa-1.png" alt="Evento Social">
+        <div><h1>Nosso espaço</h1></div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="column">
+            <img src="img/e1.png" alt="Entrada" style="width:100%" onclick="myFunction(this);">
+            <p>Entrada</p>
+            </div>
+            <div class="column">
+            <img src="img/e2.png" alt="Pista 1" style="width:100%" onclick="myFunction(this);">
+            <p>Pista 1</p>
+            </div>
+            <div class="column">
+            <img src="img/e3.png" alt="Pista 2" style="width:100%" onclick="myFunction(this);">
+            <p>Pista 2</p>
+            </div>
+            <div class="column">
+            <img src="img/e4.png" alt="Hall" style="width:100%" onclick="myFunction(this);">
+            <p>Hall de entrada</p>
+            </div>
+            <div class="column">
+                <img id="planta-baixa" src="img/planta.png" alt="Planta baixa do local" onclick="myFunction(this);">
+                <p style="transform: translateX(162%); width: 100%;">Planta baixa</p>
+            </div>
         </div>
+  
+  <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+  </div>
 <br>
-<br>
-      <div id="feed-buttom">
-      <button class="button-feedback" onclick="openForm()"><span>Faça o seu Rolê</span></button>
-      </div>
 <br>
 <br>
 <hr>
-        </main>
+    </main>
 <!-- &*&*&*&*&*&*&*&*&*& MAIN - FIM *&*&*&*&*&*&*&*&*&* -->          
 
 
@@ -88,10 +106,10 @@
             <div id="nav-rod">
 
                     <ul>
-                        <li><a href="index.html#">Home</a></li>
-                        <li><a href="historia.html">História</a></li>
-                        <li><a href="espaço.html">Espaço</a></li>
-                        <li><a href="">FAQ</a></li>
+                            <li><a href="index.html#">Home</a></li>
+                            <li><a href="historia.html">História</a></li>
+                            <li><a href="espaço.html">Espaço</a></li>
+                            <li><a href="">FAQ</a></li>
                       </ul>
             </div>
 <hr>
@@ -138,7 +156,7 @@
     </script>
 
 <script>
-  function myFunction() {
+  function myFunction(click) {
     var x = document.getElementById("go");
     if (x.className === "topnav") {
       x.className += " responsive";
@@ -147,4 +165,34 @@
     }
   }
 </script>
+
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+
+<script>
+    function myFunction(imgs) {
+      var expandImg = document.getElementById("expandedImg");
+      var imgText = document.getElementById("imgtext");
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "flex";
+    }
+    </script>
+
 </html>

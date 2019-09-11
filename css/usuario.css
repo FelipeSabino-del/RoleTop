@@ -178,104 +178,184 @@ main h1{
     font-size: 5em;
 }
 
-#line{
-    margin-top: 7em;
+#user{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 4em;
+  font-size: 30px;
 }
 
-#double-col  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
- }
+#p2{
+  margin-top: 5em;
+  font-weight: bold;
+}
 
- #double-col input {
-    height: 2.5em;
-    width: 45%;
- }
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid black;
+  background-color: ghostwhite;
+  width: 30%;
+  height: 550px;
+}
 
- input[type=submit] {
-    margin-left: 47%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 2%;
- }
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
 
- input[type=submit]:hover{
-     background-color: #ffc600;
-     color: black;
- }
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(184, 184, 184);
+}
 
- #double-line {
-    display: flex;
-    justify-content: center;
-    padding: 2em;
- }
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: black;
+  color: white;
+  border: 1px outset #ffc600;
+}
 
- .container {
-    display: block;
-    position: relative;
-    padding-right: 5em;
-    margin-top: 0px;
-    margin-left: 25px;
-    font-size: 22px;
-    user-select: none;
- }
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid black;
+  width: 70%;
+  border-left: none;
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.8)
+}
 
- input[type="checkbox"] {
-    cursor: pointer;
- }
+/* -------------pagamento------------ */
 
- #double-line  a {
-    font-size: 22px;
-    cursor: pointer;
- }
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
 
- #register {
-    text-align: center;
-    padding: 1em;
- }
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
 
- #register a {
-    padding: 0 5px;
-    cursor: pointer;
-    text-decoration: underline black;
- }
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
 
- #back {
-    background-color: red; /* For browsers that do not support gradients */
-    background-image: linear-gradient(black, #7d0093, #ffc600); /* Standard syntax (must be last) */
-    z-index: -1;
-    height: 62.9em;
- }
- input[type="email"] {
-    border: 1px solid black;
-    border-radius: 5px;
- }
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
 
- input[type="password"] {
-    border: 1px solid black;
-    border-radius: 5px;
- }
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+#tipo-evento{
+  width: 300px;
+  height: 30px;
+  margin-bottom: 1em;
+}
 
- #double-col label {
-   margin-top: 2%;
- }
+#numero-pessoas{
+  width: 300px;
+  height: 30px;
+  margin-bottom: 1em;
+}
 
- input[type="date"] {
-    border: 1px solid black;
-    border-radius: 5px;
- }
+#adicionais{
+  width: 300px;
+  height: 30px;
+  margin-bottom: 1em;
+}
 
- input[type="text"] {
-    border: 1px solid black;
-    border-radius: 5px;
- }
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+#pagamento-feito{
+  background-color: #35da3e;
+  border: 2px outset black;
+  max-width: 100%;
+  max-height: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 4em 3em 0 3em;
+  font-weight: 900;
+}
+
+/* -------------pagamento------------ */
 
 /* +=+=+=+=+=+=+=+=+=+ MAIN - FIM +=+=+=+=+=+=+=+=+=+ */
 /* @#@#@#@#@#@#@#@#@#@ FOOTER - INICIO #$#$#$#$#$#$#$ */
@@ -378,6 +458,18 @@ img {vertical-align: middle; z-index: -1;}
 }
 
 /* &*&*&*&*&*&*&*&* SLIDESHOW - FIM *&*&*&*&*&*&*&* */
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+  .tab, .tabcontent{
+    height: 1100px;
+  }
+}
 
 @media screen and (max-width: 600px) {
   #teste a.icon {
