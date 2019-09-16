@@ -182,6 +182,10 @@ main h1{
   text-align: center;
 }
 
+#social img{
+  width: 100%;
+}
+
 #feed-buttom{
   display: flex;
   justify-content: center;

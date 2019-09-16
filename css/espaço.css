@@ -211,6 +211,11 @@ main h1{
     transform: translateX(162%);
   }
 
+  #planta-baixaP{
+    transform: translateX(162%);
+     width: 100%;
+  }
+
 
   
   /* Clear floats after the columns */
@@ -385,6 +390,23 @@ img {vertical-align: middle; z-index: -1;}
 
   .linha, #linha-contato {
     display: none;
+  }
+
+  .column{
+    float: none;
+    width: 100%;
+  }
+
+  #planta-baixaP{
+    transform: translateX(0);
+  }
+
+  #planta-baixa{
+    transform: translateX(0);
+  }
+
+  .container{
+    transform: translateY(-150%);
   }
 }
 

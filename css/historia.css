@@ -45,9 +45,15 @@ nav{
   padding-bottom: 7.5em;
   height: 0;
   border-bottom: 2px solid #ffc600;
-
 }
 
+.topnav .icon {
+  display: none;
+}
+
+#teste #go {
+  transition: 0.4s;
+}
 
 #go{
   display: flex;
@@ -63,7 +69,7 @@ nav{
     1px -1px 0 black,
                  -1px  1px 0 black,
                   1px  1px 0 black;
-    margin: 1em 0.5em 0 0;
+                  margin: 1em 0.5em 0 0;
     position: fixed;
     top: 0;
     right: 0;
@@ -164,9 +170,13 @@ main{
     background-color: rgb(125, 0, 147);
 }
 
+#historia-bloco{
+  display: flex;
+  justify-content: center;
+}
+
 #historia{
     text-align: center;
-    margin-left: 35.785em;
     width: 25em;
     height: auto;
     color: white;
