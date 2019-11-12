@@ -191,17 +191,25 @@ nav{
 
 .btn-group{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+.btn-group p{
+  font-size: 20px;
+  
 }
 
 
-.btn-group, .button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
 
-.btn-group .button:hover {
-  background-color: ghostwhite;
-  color: black;
+.btn-group .fas {
+  color: rgb(235, 235, 235);
+  font-size: 3em;
+  width: 3em;
+  height: 2em;
+  padding: 0.25em;
+  text-align: center;
+  background-color:rgba(235, 235, 235, 0.3);
+  border: 1px solid rgba(235, 235, 235, 0.5);
 }
 
 #jef{
@@ -387,9 +395,13 @@ img {vertical-align: middle; z-index: -1;}
     display: none;
   }
 
-  .btn-group, .button{
+  .btn-group{
     flex-flow: column wrap;
     align-items: center;
+    
+   }
+  .btn-group .fas{
+    margin: 0.5em 0 0.5em 0; 
    }
 
    .none{
@@ -411,11 +423,13 @@ img {vertical-align: middle; z-index: -1;}
     position: absolute;
     right: 0;
     top: 0;
+    
   }
   .topnav.responsive .linha, .topnav.responsive #linha-contato {
     float: none;
     display: block;
     text-align: center;
+    
   }
 
 
