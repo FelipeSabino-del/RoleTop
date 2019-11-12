@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>RoleTop</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css">
+</head>
+
+<body>
+
+<!-- &*&*&*&*&*&*&*&*&*& HEADER - INICIO *&*&*&*&*&*&*&*&*&* -->
+
+<header>
+<div id="teste">
+    <nav>
+        <ul id="go" class="topnav">
+            <li class="linha"><a href="index.html#">Home</a></li>
+            <li class="linha"><a href="historia.html">O Role</a></li>
+            <li class="linha"><a href="espaço.html">Espaço</a></li>
+            <li class="linha"><a href="#cardapio">Nossos eventos</a></li>
+            <li class="linha open-button" onclick="openForm()">Cadastro/login</li>
+            <li id="linha-contato"><a href="index.html#copy">Contato</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars" style="font-size: 70px"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <section id="logo-area">
+    <a href="index.html"><img id="logo" src="img/logo.png" alt="Logo" title="Logo"></a>
+    </section>
+</div>
+
+<!-- &*&* POPUP LOGIN *&*&* -->
+<div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Digite seu Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Digite sua senha" name="psw" required>
+
+    <a href="usuario.html"><button type="submit" class="btn">Login</button></a> 
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    <p>Não tem login? Faça seu <a href="cadastro.html">cadastro aqui</a></p>
+    </form>
+</div>
+<!-- &*&* POPUP LOGIN *&*&* -->
+</header>
+
+<!-- &*&*&*&*&*&*&*&*&*& HEADER - FIM *&*&*&*&*&*&*&*&*&* -->
+</body>
+
+
+</html>

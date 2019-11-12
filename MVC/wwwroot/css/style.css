@@ -57,6 +57,7 @@ nav{
 }
 
 
+
 #go{
   display: flex;
   list-style-type: none;
@@ -69,11 +70,11 @@ nav{
     border: 2px solid white;
     text-shadow: -1px -1px 0 black,
     1px -1px 0 black,
-                 -1px  1px 0 black,
+                  -1px  1px 0 black,
                   1px  1px 0 black;
                   margin: 1em 0.5em 0 0;
     position: fixed;
-    top: 0;
+    top: 1.5em;
     right: 0;
     transition: 0.4s;
   }
@@ -194,6 +195,10 @@ nav{
   justify-content: space-evenly;
   flex-flow: row wrap;
 }
+.btn-group .fas:hover{
+  color: #ffc600;
+}
+
 .btn-group p{
   font-size: 20px;
   

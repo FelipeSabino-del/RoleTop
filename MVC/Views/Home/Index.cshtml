@@ -7,15 +7,15 @@
     <div>
     <div class="slideshow-container">
         <div class="mySlides1">
-        <img src="img/1.jpg" style="width:100%" height="100%">
+        <img src="img/1.jpg" style="width:100%" height="auto">
         </div>
 
         <div class="mySlides1">
-        <img src="img/2.jpg" style="width:100%" height="100%">
+        <img src="img/2.jpg" style="width:100%" height="auto">
         </div>
 
         <div class="mySlides1">
-        <img src="img/3.jpg" style="width:100%" height="100%">
+        <img src="img/3.jpg" style="width:100%" height="auto">
         </div>
 
         <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
@@ -90,3 +90,72 @@
 
 </main>
 <!-- &*&*&*&*&*&*&*&*&*& MAIN - FIM *&*&*&*&*&*&*&*&*&* -->
+
+<script>
+    var slideIndex = [1, 1];
+    var slideId = ["mySlides1", "mySlides2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+
+    function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no);
+    }
+
+    function showSlides(n, no) {
+    var i;
+    var x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) { slideIndex[no] = 1 }
+    if (n < 1) { slideIndex[no] = x.length }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex[no] - 1].style.display = "block";
+    }
+    </script>
+
+    <script>
+    function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+
+    <script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 230 || document.documentElement.scrollTop > 230) {
+        document.getElementById("teste").style.paddingBottom = "7.5em";
+        document.getElementById("go").style.fontSize = "17px";
+        document.getElementById("logo").style.height = "5em";
+        document.getElementById("teste").style.backgroundColor = "rgb(93, 0, 109)";
+        document.getElementById("teste").style.borderBottom = "1px solid black";
+    } else {
+        document.getElementById("teste").style.paddingBottom = "13em";
+        document.getElementById("go").style.fontSize = "20.8px";
+        document.getElementById("logo").style.height = "10em";
+        document.getElementById("teste").style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+        document.getElementById("teste").style.borderBottom = "none";
+    }
+    }
+    </script>
+
+    <script>
+    function myFunction() {
+    var x = document.getElementById("go");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+    }
+    </script>
+
+    <script>if (document.documentElement.clientWidth < 900) {
+    // scripts
+    }
+    </script>
