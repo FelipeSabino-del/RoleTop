@@ -29,4 +29,30 @@ mollitia, architecto earum, facere, magnam est? Nihil veritatis beatae a ea porr
 <br>
 <hr>
         </main>
+
+        <script>
+        function myFunction() {
+        var x = document.getElementById("go");
+        if (x.className === "topnav") {
+                x.className += " responsive";
+                if (x.className === "topnav responsive"){
+                document.getElementById("go").style.paddingBottom = "23em";
+                document.getElementById("go").style.paddingRight = "2em";
+                document.getElementById("go").style.paddingLeft = "2em";
+                document.getElementById("go").style.backgroundColor = "black";
+                
+                }
+        } else {
+                x.className = "topnav";
+                document.getElementById("go").style.paddingBottom = "0";
+                document.getElementById("go").style.paddingRight = "0";
+                document.getElementById("go").style.paddingLeft = "0";
+                document.getElementById("go").style.backgroundColor = "transparent";
+                
+        }
+        }
+        </script>
+
 <!-- &*&*&*&*&*&*&*&*&*& MAIN - FIM *&*&*&*&*&*&*&*&*&* -->  
+
+

@@ -37,7 +37,7 @@ nav{
 
 #teste{
   background-color: rgb(93, 0, 109);
-  z-index: 9999;
+  z-index: 999;
   top: 0;
   right: 0;
   width: 100%;
@@ -57,7 +57,7 @@ nav{
 #go{
   display: flex;
   list-style-type: none;
-  font-size: 17px;
+  font-size: 1.3em;
     height: 2.5em;
     align-items: center;
     justify-content: flex-start;
@@ -77,6 +77,11 @@ nav{
 #logo{
     height: 5em;
     margin: 15px 0 0 45px;
+}
+
+.fa-bars:before {
+  content: "\f0c9";
+  padding: 0.1em;
 }
 
 /* POPUP LOGIN */
@@ -343,15 +348,20 @@ img {vertical-align: middle; z-index: -1;}
     text-align: center;
   }
 
+
   #go{
     display: flex;
     flex-direction: column;
     border: none;
+    height: 5em;
   }
 
   .linha, #linha-contato{
     border-right: none;
-    font-size: 35px
+    font-size: 35px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    border-bottom: 2px solid white;
   }
   
   #teste{
@@ -359,7 +369,7 @@ img {vertical-align: middle; z-index: -1;}
     vertical-align: middle;
   }
   #linha-contato{
-    padding: 0; 
+    padding: 0.5em 0 0.5em 0; 
   }
   #copy{
     display: flex;

@@ -60,3 +60,5 @@ C:\Users\felip\Desktop\Programas\Trabalhos\Senai\RoleTop\RoleTop\MVC\obj\Debug\n
 C:\Users\felip\Desktop\Programas\Trabalhos\Senai\RoleTop\RoleTop\MVC\obj\Debug\netcoreapp2.2\MVC.csproj.CopyComplete
 C:\Users\48417687858\Documents\Senai\RoleTop\MVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutHOME.g.cshtml.cs
 C:\Users\48417687858\Documents\Senai\RoleTop\MVC\obj\Debug\netcoreapp2.2\Razor\Views\Historia\Index.g.cshtml.cs
+C:\Users\felip\Desktop\Programas\Trabalhos\Senai\RoleTop\RoleTop\MVC\obj\Debug\netcoreapp2.2\Razor\Views\Historia\Index.g.cshtml.cs
+C:\Users\felip\Desktop\Programas\Trabalhos\Senai\RoleTop\RoleTop\MVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutHOME.g.cshtml.cs
