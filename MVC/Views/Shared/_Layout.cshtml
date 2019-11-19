@@ -2,6 +2,7 @@
     var nomeView = (string) ViewData["NomeView"]; 
 }
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,9 +31,20 @@
         {
             <link rel="stylesheet" href="~/css/espaço.css" type="text/css">
         }
+    @if("Evento".Equals(nomeView))
+        {
+            <link rel="stylesheet" href="~/css/eventos.css" type="text/css">
+        }
+    @if("Cadastro".Equals(nomeView))
+        {
+            <link rel="stylesheet" href="~/css/cadastro.css" type="text/css">
+        }
+    @if("msgfinal".Equals(nomeView))
+        {
+            <link rel="stylesheet" href="~/css/eventos.css" type="text/css">
+        }
 
 <!-- &*&*&*&*&*&*&*&*&*& HEADER - INICIO *&*&*&*&*&*&*&*&*&* -->
-
     <header>
     <div id="teste">
         <nav>
@@ -40,7 +52,7 @@
             <li class="linha"><a asp-controller="Home" asp-action="Index">Home</a></li>
             <li class="linha"><a asp-controller="Historia" asp-action="Index">O Role</a></li>
             <li class="linha"><a asp-controller="Espaco" asp-action="Index">Espaço</a></li>
-            <li class="linha"><a href="#cardapio">Nossos eventos</a></li>
+            <li class="linha"><a asp-controller="Home" asp-action="Index">Nossos eventos</a></li>
             <li class="linha open-button" onclick="openForm()">Cadastro/login</li>
             <li id="linha-contato"><a href="#copy">Contato</a></li>
             <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -67,7 +79,7 @@
                 
                     <a href="usuario.html"><button type="submit" class="btn">Login</button></a>
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                    <p>Não tem login? Faça seu <a href="cadastro.html">cadastro aqui</a></p>
+                    <p>Não tem login? Faça seu <a asp-controller="Cadastro" asp-action="Index">cadastro aqui</a></p>
                     </form>
                 </div>
             <!-- &*&* POPUP LOGIN *&*&* -->  
@@ -83,8 +95,8 @@
 
     <ul>
     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-    <li><a href="historia.html">História</a></li>
-    <li><a href="espaço.html">Espaço</a></li>
+    <li><a asp-controller="Historia" asp-action="Index">História</a></li>
+    <li><a asp-controller="Espaco" asp-action="Index">Espaço</a></li>
     <li><a href="">FAQ</a></li>
     </ul>
 </div>

@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\MVC.csproj",
+  "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\RoleTop\\MVC\\MVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2869,7 +2869,7 @@
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.SpaServices.Prerendering.PrerenderTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.SpaServices",
-        "Documentation": "\n            <summary>\n            A tag helper for prerendering JavaScript applications on the server.\n            </summary>\n        ",
+        "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": false,
         "TagMatchingRules": [
@@ -2898,7 +2898,7 @@
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            Specifies the path to the JavaScript module containing prerendering code.\n            </summary>\n        ",
+            "Documentation": null,
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "ModuleName"
@@ -2912,7 +2912,7 @@
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            If set, specifies the name of the CommonJS export that is the prerendering function to execute.\n            If not set, the JavaScript module's default CommonJS export must itself be the prerendering function.\n            </summary>\n        ",
+            "Documentation": null,
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "ExportName"
@@ -2926,7 +2926,7 @@
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            An optional JSON-serializable parameter to be supplied to the prerendering code.\n            </summary>\n        ",
+            "Documentation": null,
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "CustomDataParameter"
@@ -2940,7 +2940,7 @@
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            The maximum duration to wait for prerendering to complete.\n            </summary>\n        ",
+            "Documentation": null,
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "TimeoutMillisecondsParameter"
@@ -2961,11 +2961,6 @@
   "RootNamespace": "MVC",
   "Documents": [
     {
-      "FilePath": "Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Views\\Historia\\Index.cshtml",
       "TargetPath": "Views\\Historia\\Index.cshtml",
       "FileKind": "mvc"
@@ -2973,6 +2968,16 @@
     {
       "FilePath": "Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Eventos\\Universitario.cshtml",
+      "TargetPath": "Views\\Eventos\\Universitario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Shared\\Erro.cshtml",
+      "TargetPath": "Views\\Shared\\Erro.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3001,13 +3006,38 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Eventos\\Social.cshtml",
+      "TargetPath": "Views\\Eventos\\Social.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Espaco\\Index.cshtml",
       "TargetPath": "Views\\Espaco\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Cadastro\\Index.cshtml",
+      "TargetPath": "Views\\Cadastro\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Shared\\Sucesso.cshtml",
+      "TargetPath": "Views\\Shared\\Sucesso.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Eventos\\Corporativo.cshtml",
+      "TargetPath": "Views\\Eventos\\Corporativo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Eventos\\Casamento.cshtml",
+      "TargetPath": "Views\\Eventos\\Casamento.cshtml",
       "FileKind": "mvc"
     }
   ],
