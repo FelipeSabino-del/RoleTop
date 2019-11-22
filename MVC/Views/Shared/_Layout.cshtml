@@ -20,8 +20,7 @@
 
     @if("Home".Equals(nomeView))
         {
-            <link rel="stylesheet" href="css/style.css" type="text/css">
-            
+            <link rel="stylesheet" href="~/css/style.css" type="text/css">
         }
     @if("Historia".Equals(nomeView))
         {
@@ -124,40 +123,20 @@
 </section>
 
 </footer>
+</body>
+
+    @if("Home".Equals(nomeView))
+    {
+        <link rel="stylesheet" href="~/js/Home/Scroll.js" type="text/js">
+        <link rel="stylesheet" href="~/js/Home/SlideShow.js" type="text/js">
+    }
+    @if("Espaco".Equals(nomeView))
+    {
+        <link rel="stylesheet" href="~/js/Home/Galeria.js" type="text/js">
+    }
 
 <!-- &*&*&*&*&*&*&*&*&*& FOOTER - FIM *&*&*&*&*&*&*&*&*&* -->
 
-
-
-
-
-</body>
-
-
-
-
-
-<script>
-    var slideIndex = [1, 1];
-    var slideId = ["mySlides1", "mySlides2"]
-    showSlides(1, 0);
-    showSlides(1, 1);
-
-    function plusSlides(n, no) {
-    showSlides(slideIndex[no] += n, no);
-    }
-
-    function showSlides(n, no) {
-    var i;
-    var x = document.getElementsByClassName(slideId[no]);
-    if (n > x.length) { slideIndex[no] = 1 }
-    if (n < 1) { slideIndex[no] = x.length }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex[no] - 1].style.display = "block";
-    }
-    </script>
 
     <script>
     function openForm() {
@@ -169,7 +148,7 @@
     }
     </script>
 
-
+<!-- 
     <script>
     // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
     window.onscroll = function () { scrollFunction() };
@@ -182,28 +161,9 @@
         
     }
     }
-    </script>
+    </script> -->
 
-    <script>
-    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-    if (document.body.scrollTop > 230 || document.documentElement.scrollTop > 230) {
-        document.getElementById("teste").style.paddingBottom = "7.5em";
-        document.getElementById("go").style.fontSize = "17px";
-        document.getElementById("logo").style.height = "5em";
-        document.getElementById("teste").style.backgroundColor = "rgb(93, 0, 109)";
-        document.getElementById("teste").style.borderBottom = "1px solid black";
-    } else {
-        document.getElementById("teste").style.paddingBottom = "13em";
-        document.getElementById("go").style.fontSize = "20.8px";
-        document.getElementById("logo").style.height = "10em";
-        document.getElementById("teste").style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        document.getElementById("teste").style.borderBottom = "none";
-    }
-    }
-    </script>
+    
 
     <script>
     function myFunction() {
@@ -219,58 +179,9 @@
     
     </script>
     
-
-    
-
     <script>if (document.documentElement.clientWidth < 900) {
     // scripts
     }
     </script>
-
-
-<script>
-// Open the Modal
-function openModal() {
-document.getElementById("myModal").style.display = "block";
-}
-
-// Close the Modal
-function closeModal() {
-document.getElementById("myModal").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-var i;
-var slides = document.getElementsByClassName("mySlides");
-var dots = document.getElementsByClassName("demo");
-var captionText = document.getElementById("caption");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-}
-for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
-captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
-
-
     
 </html>
