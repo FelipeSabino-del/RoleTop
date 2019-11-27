@@ -3,41 +3,63 @@
 <br>
 <br>
 <br>
-        <div id="line">
-            
-            <form method="POST" action='@Url.Action("CadastrarCliente", "Cadastro")'>
-                    <h1>Cadastro</h1>
-                <div id="align">
-                    <div id="double-col">
-                        <label for="nome">Nome Completo</label>                       
-                        <input type="text"  placeholder="Nome" name="nome">
+    <div id="line">        
+        <form method="POST" action='@Url.Action("CadastrarCliente", "Cadastro")'>
+                <h1>Cadastro</h1>
+                    <div id="align">
+                        <div id="double-col">
+                            <label for="nome">Nome Completo</label>                       
+                            <input type="text"  placeholder="Nome" name="nome">
 
-                        <label for="email">Email</label>                       
-                        <input type="email"  placeholder="Email" name="email">
+                            <label for="email">Email</label>                       
+                            <input type="email"  placeholder="Email" name="email">
 
-                        <label for="cpf">CPF</label>                       
-                        <input type="text"  placeholder="cpf" name="cpf">
+                            <label for="cpf">CPF</label>                       
+                            <input type="text"  placeholder="cpf" name="cpf">
 
-                        <label for="teleone">Telefone</label>                       
-                        <input type="text" placeholder="telefone/celular" name="telefone">
+                            <label for="teleone">Telefone</label>                       
+                            <input type="text" placeholder="telefone/celular" name="telefone">
 
-                        <label for="data">Data de Nascimento</label>                      
-                        <input type="date" placeholder="Data de Nascimento" name="data-nascimento">
+                            <label for="data">Data de Nascimento</label>                      
+                            <input type="date" placeholder="Data de Nascimento" name="data-nascimento">
 
-                        <label for="senha">Senha</label>
-                        <input id="senha" type="password" maxlength="20" minlength="6" name="senha" />
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" maxlength="20" minlength="6" name="senha" />
 
-                        <label for="confirmar-senha">Confirmar Senha</label>
-                        <input type="password" maxlength="20" minlength="6" name="confirmar-senha" />
+                            <label for="confirmar-senha">Confirmar Senha</label>
+                            <input type="password" maxlength="20" minlength="6" name="confirmar-senha" />
+                        </div>
                     </div>
-                </div>
-                <input type="submit" value="Registrar">
-                <br>
-                <br>
-            </form>
-        </div>
+            <input type="submit" value="Registrar">
+<br>
+<br>
+        </form>
+    </div>
 <br>
 <br>
 <br>
 <hr>
-    </main>
+</main>
+
+<script>
+        function myFunction() {
+        var x = document.getElementById("go");
+        if (x.className === "topnav") {
+                x.className += " responsive";
+                if (x.className === "topnav responsive"){
+                document.getElementById("go").style.paddingBottom = "23em";
+                document.getElementById("go").style.fontSize = "2.5em";
+                document.getElementById("go").style.backgroundColor = "black";
+                document.getElementById("go").style.margin = "0em";
+                
+                }
+        } else {
+                x.className = "topnav";
+                document.getElementById("go").style.paddingBottom = "0";
+                document.getElementById("go").style.fontSize = "1.3em";
+                document.getElementById("go").style.backgroundColor = "transparent";
+                document.getElementById("go").style.margin = "0em";
+                
+        }
+        }
+</script>

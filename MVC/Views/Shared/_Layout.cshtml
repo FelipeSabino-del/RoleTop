@@ -11,7 +11,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>RoleTop</title>
-
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css">
 </head>
 
@@ -94,42 +93,42 @@
 <div id="nav-rod">
 
     <ul>
-    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-    <li><a asp-controller="Historia" asp-action="Index">História</a></li>
-    <li><a asp-controller="Espaco" asp-action="Index">Espaço</a></li>
-    <li><a href="">FAQ</a></li>
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Historia" asp-action="Index">História</a></li>
+        <li><a asp-controller="Espaco" asp-action="Index">Espaço</a></li>
+        <li><a href="">FAQ</a></li>
     </ul>
 </div>
 <hr>
 <section id="copy">
     <a asp-controller="Home" asp-action="Index"><img id="logo-pe" src="img/logo.png" alt=""></a>
-    <div id="contato">
-    <h3>Contato</h3>
-    <address>
-        Alameda Barão de Limeira, 539 <br>
-        São Paulo, SP <br>
-        (11) 4002-8922 <br>
-        (11) 98574-8485 <br>
-        emaildecontato@hotmail.com
-    </address>
-    </div>
+        <div id="contato">
+            <h3>Contato</h3>
+                <address>
+                    Alameda Barão de Limeira, 539 <br>
+                    São Paulo, SP <br>
+                    (11) 4002-8922 <br>
+                    (11) 98574-8485 <br>
+                    emaildecontato@hotmail.com
+                </address>
+        </div>
     <div id="icon-rodape">
-    <img src="img/facebook.png" alt="" style="width: 55px; height: 55px;">
-    <br>
-    <img src="img/instagram.png" alt="" style="width: 55px; height: 55px;">
+        <img src="img/facebook.png" alt="" style="width: 55px; height: 55px;">
+<br>
+        <img src="img/instagram.png" alt="" style="width: 55px; height: 55px;">
     </div>
     <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8871329131725!2d-46.64847708538464!3d-23.536561566561176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5843deade6e3%3A0x124f377d06c7e71f!2sAlameda%20Bar%C3%A3o%20de%20Limeira%2C%20539%20-%20Campos%20El%C3%ADseos%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001202-001!5e0!3m2!1spt-BR!2sbr!4v1567885525655!5m2!1spt-BR!2sbr"
-    width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    width="600" height="200" frameborder="0" style="border:0;" allowfullscreen="">
+    </iframe>
 </section>
-
 </footer>
 </body>
 
     @if("Home".Equals(nomeView))
     {
-        <script src="~/js/Espaco/Scroll.js" type="text/javascript"></script>
-        <script src="~/js/Espaco/SlideShow.js" type="text/javascript"></script>
+        <script src="~/js/Home/Scroll.js" type="text/javascript"></script>
+        <script src="~/js/Home/SlideShow.js" type="text/javascript"></script>
     }
     @if("Espaco".Equals(nomeView))
     {
@@ -139,7 +138,7 @@
 <!-- &*&*&*&*&*&*&*&*&*& FOOTER - FIM *&*&*&*&*&*&*&*&*&* -->
 
 
-    <script>
+<script>
     function openForm() {
     document.getElementById("myForm").style.display = "block";
     }
@@ -147,42 +146,34 @@
     function closeForm() {
     document.getElementById("myForm").style.display = "none";
     }
-    </script>
+</script>
 
-<!-- 
-    <script>
-    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-    if (document.body.scrollTop > 230 || document.documentElement.scrollTop > 230) {
-        document.getElementById("topnav").style.display = "none";
-        
-    } else {
-        
-    }
-    }
-    </script> -->
-
-    
-
-    <script>
-    function myFunction() {
-    var x = document.getElementById("go");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-        
+<script>
+        function myFunction() {
+        var x = document.getElementById("go");
+        if (x.className === "topnav") {
+                x.className += " responsive";
+                if (x.className === "topnav responsive"){
+                document.getElementById("go").style.paddingBottom = "23em";
+                document.getElementById("go").style.fontSize = "2.5em";
+                document.getElementById("go").style.backgroundColor = "black";
+                document.getElementById("go").style.margin = "0em";
+                
+                }
+        } else {
+                x.className = "topnav";
+                document.getElementById("go").style.paddingBottom = "0";
+                document.getElementById("go").style.fontSize = "1.3em";
+                document.getElementById("go").style.backgroundColor = "transparent";
+                document.getElementById("go").style.margin = "0em";
+                
         }
-    } else {
-        x.className = "topnav";
-        
-    }
+        }
+</script>
     
-    </script>
-    
-    <script>if (document.documentElement.clientWidth < 900) {
+<script>if (document.documentElement.clientWidth < 900) {
     // scripts
     }
-    </script>
+</script>
     
 </html>

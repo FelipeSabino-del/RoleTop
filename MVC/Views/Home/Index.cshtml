@@ -5,35 +5,30 @@
 <!-- &*&*&*&*&*&*&*&*&*& MAIN - INICIO *&*&*&*&*&*&*&*&*&* -->
 <main>
     <div>
-    <div class="slideshow-container">
-        <div class="mySlides1">
-        <img src="img/1.jpg" style="width:100%" height="auto">
+        <div class="slideshow-container">
+            <div class="mySlides1">
+                <img src="img/1.jpg" style="width:100%" height="auto">
+            </div>
+            <div class="mySlides1">
+                <img src="img/2.jpg" style="width:100%" height="auto">
+            </div>
+            <div class="mySlides1">
+                <img src="img/3.jpg" style="width:100%" height="auto">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
         </div>
-
-        <div class="mySlides1">
-        <img src="img/2.jpg" style="width:100%" height="auto">
-        </div>
-
-        <div class="mySlides1">
-        <img src="img/3.jpg" style="width:100%" height="auto">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-    </div>
-
-    
     </div>
     <div id="cardapio">
     <br>
-    <h2>Cardápio de eventos</h2>
+        <h2>Cardápio de eventos</h2>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
     <div class="btn-group">
         <a asp-controller="Eventos" asp-action="Social"><i class="fas fa-birthday-cake"><p>Social</p></i></a>
@@ -41,110 +36,69 @@
         <a asp-controller="Eventos" asp-action="Universitario"><i class="fas fa-graduation-cap"><p>Universitário</p></i></a> 
         <a asp-controller="Eventos" asp-action="Corporativo"><i class="fas fa-handshake"><p>Corporativo</p></i></a>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <hr>
-    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<br>
     <h2>Feedback</h2>
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
     <div id="jef">
         <div>
-        <p><img src="img/user.png" alt=""> Jeferson Silva</p>
+            <p>
+                <img src="img/user.png" alt=""> 
+                Jeferson Silva
+            </p>
         </div>
         <div class="none">
-        <p><img src="img/user.png" alt=""> Jeferson Silva</p>
+            <p>
+                <img src="img/user.png" alt=""> 
+                Jeferson Silva
+            </p>
         </div>
         <div class="none">
-        <p><img src="img/user.png" alt=""> Jeferson Silva</p>
+        <p>
+            <img src="img/user.png" alt=""> 
+            Jeferson Silva
+        </p>
         </div>
     </div>
 
     <div id="comentario">
         <div>
-        <textarea readonly name="1" id="" cols="30" rows="5"
-            placeholder="Depoimento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi nobis quas blanditiis facere, quia vitae temporibus officia sequi soluta illo aliquam est doloribus. Vel doloribus quas hic. Fugit, iure?</textarea>
+            <textarea readonly name="1" id="" cols="30" rows="5"
+                placeholder="Depoimento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi nobis quas blanditiis facere, quia vitae temporibus officia sequi soluta illo aliquam est doloribus. Vel doloribus quas hic. Fugit, iure?</textarea>
         </div>
         <div class="none">
-        <textarea readonly name="1" id="" cols="30" rows="5"
-            placeholder="Depoimento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi nobis quas blanditiis facere, quia vitae temporibus officia sequi soluta illo aliquam est doloribus. Vel doloribus quas hic. Fugit, iure?</textarea>
+            <textarea readonly name="1" id="" cols="30" rows="5"
+                placeholder="Depoimento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi nobis quas blanditiis facere, quia vitae temporibus officia sequi soluta illo aliquam est doloribus. Vel doloribus quas hic. Fugit, iure?</textarea>
         </div>
         <div class="none">
-        <textarea readonly name="1" id="" cols="30" rows="5"
-            placeholder="Depoimento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi nobis quas blanditiis facere, quia vitae temporibus officia sequi soluta illo aliquam est doloribus. Vel doloribus quas hic. Fugit, iure?</textarea>
+            <textarea readonly name="1" id="" cols="30" rows="5"
+                placeholder="Depoimento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi nobis quas blanditiis facere, quia vitae temporibus officia sequi soluta illo aliquam est doloribus. Vel doloribus quas hic. Fugit, iure?</textarea>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
     <div id="feed-buttom">
-    <button class="button-feedback" onclick="openForm()"><span>Deixe seu Feedback</span></button>
+        <button class="button-feedback" onclick="openForm()">
+            <span>
+                Deixe seu Feedback
+            </span>
+        </button>
     </div>
-    </div>
-    <hr>
+<hr>
 
 </main>
 <!-- &*&*&*&*&*&*&*&*&*& MAIN - FIM *&*&*&*&*&*&*&*&*&* -->
 
 <script>
-    var slideIndex = [1, 1];
-    var slideId = ["mySlides1", "mySlides2"]
-    showSlides(1, 0);
-    showSlides(1, 1);
-
-    function plusSlides(n, no) {
-    showSlides(slideIndex[no] += n, no);
-    }
-
-    function showSlides(n, no) {
-    var i;
-    var x = document.getElementsByClassName(slideId[no]);
-    if (n > x.length) { slideIndex[no] = 1 }
-    if (n < 1) { slideIndex[no] = x.length }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex[no] - 1].style.display = "block";
-    }
-    </script>
-
-    <script>
-    function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    }
-
-    function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-    }
-    </script>
-
-    <script>
-    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-    if (document.body.scrollTop > 230 || document.documentElement.scrollTop > 230) {
-        document.getElementById("teste").style.paddingBottom = "7.5em";
-        document.getElementById("go").style.fontSize = "17px";
-        document.getElementById("logo").style.height = "5em";
-        document.getElementById("teste").style.backgroundColor = "rgb(93, 0, 109)";
-        document.getElementById("teste").style.borderBottom = "1px solid black";
-    } else {
-        document.getElementById("teste").style.paddingBottom = "13em";
-        document.getElementById("go").style.fontSize = "20.8px";
-        document.getElementById("logo").style.height = "10em";
-        document.getElementById("teste").style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        document.getElementById("teste").style.borderBottom = "none";
-    }
-    }
-    </script>
-
-    <script>
     function myFunction() {
     var x = document.getElementById("go");
     if (x.className === "topnav") {
@@ -154,7 +108,30 @@
         x.className = "topnav";
     }
     }
-    </script>
+</script>
+
+<script>
+        function myFunction() {
+        var x = document.getElementById("go");
+        if (x.className === "topnav") {
+                x.className += " responsive";
+                if (x.className === "topnav responsive"){
+                document.getElementById("go").style.paddingBottom = "23em";
+                document.getElementById("go").style.fontSize = "2.5em";
+                document.getElementById("go").style.backgroundColor = "black";
+                document.getElementById("go").style.margin = "0em";
+                
+                }
+        } else {
+                x.className = "topnav";
+                document.getElementById("go").style.paddingBottom = "0";
+                document.getElementById("go").style.fontSize = "1.3em";
+                document.getElementById("go").style.backgroundColor = "transparent";
+                document.getElementById("go").style.margin = "0em";
+                
+        }
+        }
+</script>
 
     <script>if (document.documentElement.clientWidth < 900) {
     // scripts

@@ -12,14 +12,41 @@
 <br>
 <br>
         <div id="social">
-        <img src="~/img/Festa-2.png" alt="Evento Social">
+                <img src="~/img/Festa-2.png" alt="Evento Social">
         </div>
 <br>
 <br>
-<div id="feed-buttom">
-<button class="button-feedback" onclick="openForm()"><span>Faça o seu Rolê</span></button>
-</div>
+        <div id="feed-buttom">
+                <button class="button-feedback" onclick="openForm()">
+                        <span>
+                                Faça o seu Rolê
+                        </span>
+                </button>
+        </div>
 <br>
 <br>
 <hr>
-        </main>
+</main>
+
+<script>
+        function myFunction() {
+        var x = document.getElementById("go");
+        if (x.className === "topnav") {
+                x.className += " responsive";
+                if (x.className === "topnav responsive"){
+                document.getElementById("go").style.paddingBottom = "23em";
+                document.getElementById("go").style.fontSize = "2.5em";
+                document.getElementById("go").style.backgroundColor = "black";
+                document.getElementById("go").style.margin = "0em";
+                
+                }
+        } else {
+                x.className = "topnav";
+                document.getElementById("go").style.paddingBottom = "0";
+                document.getElementById("go").style.fontSize = "1.3em";
+                document.getElementById("go").style.backgroundColor = "transparent";
+                document.getElementById("go").style.margin = "0em";
+                
+        }
+        }
+</script>

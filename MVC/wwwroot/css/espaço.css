@@ -487,6 +487,8 @@ img {vertical-align: middle; z-index: -1;}
     display: flex;
     flex-direction: column;
     border: none;
+    height: 5em;
+    margin: 0em;
   }
 
   .linha, #linha-contato{
