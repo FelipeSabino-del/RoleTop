@@ -1,12 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
-    namespace MVC.Controllers  
+using MVC.ViewModels;
+
+namespace MVC.Controllers  
     {
-    public class HistoriaController : Controller
+    public class HistoriaController : AbstractController
     {
         public IActionResult Index()
         {
-            ViewData["NomeView"] = "Historia";
-            return View();
+            return View (new BaseViewModel()
+            {
+                NomeView = "Historia",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
         }
 
     }

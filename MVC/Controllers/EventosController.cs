@@ -1,28 +1,45 @@
 using Microsoft.AspNetCore.Mvc;
+using MVC.ViewModels;
 
 namespace MVC.Controllers
 {
-    public class EventosController : Controller
+    public class EventosController : AbstractController
     {
         public IActionResult Social()
         {
-            ViewData["NomeView"] = "Evento";
-            return View();
+            return View (new BaseViewModel()
+            {
+                NomeView = "Evento",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
         }
         public IActionResult Casamento()
         {
-            ViewData["NomeView"] = "Evento";
-            return View();
+            return View (new BaseViewModel()
+            {
+                NomeView = "Evento",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
         }
         public IActionResult Universitario()
         {
-            ViewData["NomeView"] = "Evento";
-            return View();
+            return View (new BaseViewModel()
+            {
+                NomeView = "Evento",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
         }
         public IActionResult Corporativo()
         {
-            ViewData["NomeView"] = "Evento";
-            return View();
+            return View (new BaseViewModel()
+            {
+                NomeView = "Evento",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
         }
     }
 }

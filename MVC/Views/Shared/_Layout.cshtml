@@ -1,8 +1,4 @@
-﻿@{
-    var nomeView = (string) ViewData["NomeView"]; 
-}
-
-
+﻿@model MVC.ViewModels.BaseViewModel
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,27 +12,27 @@
 
 <body>
 
-    @if("Home".Equals(nomeView))
+    @if("Home".Equals(@Model.NomeView))
         {
             <link rel="stylesheet" href="~/css/style.css" type="text/css">
         }
-    @if("Historia".Equals(nomeView))
+    @if("Historia".Equals(@Model.NomeView))
         {
             <link rel="stylesheet" href="~/css/historia.css" type="text/css">
         }
-    @if("Espaco".Equals(nomeView))
+    @if("Espaco".Equals(@Model.NomeView))
         {
             <link rel="stylesheet" href="~/css/espaço.css" type="text/css">
         }
-    @if("Evento".Equals(nomeView))
+    @if("Evento".Equals(@Model.NomeView))
         {
             <link rel="stylesheet" href="~/css/eventos.css" type="text/css">
         }
-    @if("Cadastro".Equals(nomeView))
+    @if("Cadastro".Equals(@Model.NomeView))
         {
             <link rel="stylesheet" href="~/css/cadastro.css" type="text/css">
         }
-    @if("msgfinal".Equals(nomeView))
+    @if("msgfinal".Equals(@Model.NomeView))
         {
             <link rel="stylesheet" href="~/css/eventos.css" type="text/css">
         }
@@ -125,12 +121,12 @@
 </footer>
 </body>
 
-    @if("Home".Equals(nomeView))
+    @if("Home".Equals(@Model.NomeView))
     {
         <script src="~/js/Home/Scroll.js" type="text/javascript"></script>
         <script src="~/js/Home/SlideShow.js" type="text/javascript"></script>
     }
-    @if("Espaco".Equals(nomeView))
+    @if("Espaco".Equals(@Model.NomeView))
     {
         <script src="~/js/Espaco/Galeria.js" type="text/javascript"></script>
     }
