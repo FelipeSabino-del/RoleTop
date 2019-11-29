@@ -32,23 +32,28 @@ namespace MVC.Controllers {
                 var usuario = form["email"];
                 var senha = form["senha"];
 
-                var cliente = userRepository.ObterPor(usuario);
+                var user = userRepository.ObterPor(usuario);
 
-                if (cliente != null)
+                if (user != null)
                 {
-                    if (cliente.Senha.Equals(senha))
+                    if (user.Senha.Equals(senha))
                     {
                         HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
-                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
+                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, user.Nome);
                         return RedirectToAction("Historico", "Cliente");
                     }else
                     {
-                        return View("Erro", new RespostaViewModel($"Senha incorreta!"));
+                        return View("Erro", new RespostaViewModel($"Senha incorreta!"){
+                            NomeView = "Login"
+                        });
                     }
                 }else
                 {
                     
-                    return View ("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado"));
+                    return View ("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado")
+                    {
+                        NomeView = "Login"
+                    });
                 }
 
             } catch (Exception e) {

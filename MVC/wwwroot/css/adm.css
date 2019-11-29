@@ -178,6 +178,24 @@ main h1{
     font-size: 5em;
 }
 
+#mensagem{
+  height: 45em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mensagem h2{
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 black,
+                  1px -1px 0 black,
+                  -1px  1px 0 black,
+                  1px  1px 0 black;
+                  margin: 1em 0.5em 0 0;
+}
+
 #user{
   display: flex;
   justify-content: left;

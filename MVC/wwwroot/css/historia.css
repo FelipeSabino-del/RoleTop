@@ -179,6 +179,24 @@ main{
   justify-content: center;
 }
 
+#mensagem{
+  height: 45em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mensagem h2{
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 black,
+                  1px -1px 0 black,
+                  -1px  1px 0 black,
+                  1px  1px 0 black;
+                  margin: 1em 0.5em 0 0;
+}
+
 #historia{
     text-align: center;
     width: 25em;

@@ -32,7 +32,7 @@
         {
             <link rel="stylesheet" href="~/css/cadastro.css" type="text/css">
         }
-    @if("msgfinal".Equals(@Model.NomeView))
+    @if("Login".Equals(@Model.NomeView))
         {
             <link rel="stylesheet" href="~/css/eventos.css" type="text/css">
         }
@@ -63,7 +63,7 @@
 
         <!-- &*&* POPUP LOGIN *&*&* -->
         <div class="form-popup" id="myForm">
-                <form action="/action_page.php" class="form-container">
+                <form method="POST" action='@Url.Action("Login", "Cliente")' class="form-container">
                     <h1>Login</h1>
                 
                     <label for="email"><b>Email</b></label>

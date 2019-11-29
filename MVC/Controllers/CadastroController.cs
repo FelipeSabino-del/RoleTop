@@ -24,14 +24,14 @@ namespace MVC.Controllers {
             try {
                 Usuario usuario = new Usuario (form["nome"], form["cpf"], form["telefone"], form["senha"], form["email"], DateTime.Parse (form["data-nascimento"]));
                 userRepository.Inserir (usuario);
-                return View ("Sucesso", new BaseViewModel(){
+                return View ("Sucesso", new RespostaViewModel(){
                     NomeView = "Cadastro"
                 });
                 
 
             } catch (Exception e) {
                 System.Console.WriteLine (e.StackTrace);
-                return View ("Erro", new BaseViewModel(){
+                return View ("Erro", new RespostaViewModel(){
                     NomeView = "Cadastro"
                 });
             }
