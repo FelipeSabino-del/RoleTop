@@ -1,3 +1,4 @@
+@model MVC.ViewModels.HistoricoViewModel
 <main>
 <br>
 <br>
@@ -8,7 +9,7 @@
                 <img src="~/img/usuario.png" alt="" style="width: 200px; height: 200px">
             </p>
             <p id="p2">
-                Jeferson Silva
+                @Model.UsuarioNome
             </p>
         </div>
 <br>
@@ -24,13 +25,14 @@
             <h3>Meus eventos</h3>
 <br>
 <br>
-        <p>Evento universitário baile da sala 8 - 32/02/2102 - adionais de som e luz.
-        <img src="~/img/check.png" alt="Check" width="80px"; height="80px">  CONFIRMADO
-        </p>
-        
-        <p>Evento corporativo: Reunião de profs - 26/13/1996 - sem diconais.
-        <img src="~/img/Retângulo 93.png" alt="" width="65px"; height="65px";> AGUARDANDO APROVAÇÃO
-        </p>
+        @foreach(var evento in Model.Eventos) {
+                <tr>
+                    <td>@evento.DataDoEvento</td>
+                    <td>@evento.Adicional.Nome</td>
+                    <td>@evento.Adicional.Preco</td>
+                    <td>@evento.PrecoTotal</td>
+                </tr>
+            }
         </div>
         
         <div id="Paris" class="tabcontent">
@@ -54,11 +56,12 @@
                         <input type="number" id="numero-pessoas" name="numero-pessoas" placeholder="Número">
 
                         <label for="adicionais"><i class="fa fa-plus"></i> Serviços adicionais</label>
-                        <select id="adicionais" name="serviços-adicionais">
-                            <option value="luz">Luz</option>
-                            <option value="som">Som</option>
-                            <option value="luz+som">Luz + Som</option>
-                            <option value="sem-adicionais">Sem adicionais</option>
+                        <select>
+                            <option value="">Selecione</option>
+                            @foreach(var adicional in Model.Adicionais)
+                                {
+                                    <option value=@adicional.Nome>@adicional.Nome por @adicional.Preco</option>
+                                }
                         </select>
 
                         <label for="descriçao"><i class="fa fa-comment"></i> Descrição do evento e data</label>

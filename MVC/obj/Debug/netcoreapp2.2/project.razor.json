@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\MVC.csproj",
+  "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\MVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2961,88 +2961,93 @@
   "RootNamespace": "MVC",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Eventos\\Casamento.cshtml",
-      "TargetPath": "Views\\Eventos\\Casamento.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Eventos\\Social.cshtml",
-      "TargetPath": "Views\\Eventos\\Social.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Shared\\_CookieConsentPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Shared\\Sucesso.cshtml",
-      "TargetPath": "Views\\Shared\\Sucesso.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Eventos\\Universitario.cshtml",
-      "TargetPath": "Views\\Eventos\\Universitario.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Espaco\\Index.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Espaco\\Index.cshtml",
       "TargetPath": "Views\\Espaco\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Eventos\\Social.cshtml",
+      "TargetPath": "Views\\Eventos\\Social.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Cadastro\\Index.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Cadastro\\Index.cshtml",
       "TargetPath": "Views\\Cadastro\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Shared\\Erro.cshtml",
-      "TargetPath": "Views\\Shared\\Erro.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Shared\\Sucesso.cshtml",
+      "TargetPath": "Views\\Shared\\Sucesso.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\User\\Painel.cshtml",
-      "TargetPath": "Views\\User\\Painel.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Historia\\Index.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Eventos\\Casamento.cshtml",
+      "TargetPath": "Views\\Eventos\\Casamento.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Administrador\\Dashboard.cshtml",
+      "TargetPath": "Views\\Administrador\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Historia\\Index.cshtml",
       "TargetPath": "Views\\Historia\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\Eventos\\Corporativo.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Eventos\\Corporativo.cshtml",
       "TargetPath": "Views\\Eventos\\Corporativo.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\felip\\Desktop\\Programas\\Trabalhos\\Senai\\RoleTop\\MVC\\Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\User\\Painel.cshtml",
+      "TargetPath": "Views\\User\\Painel.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Eventos\\Universitario.cshtml",
+      "TargetPath": "Views\\Eventos\\Universitario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Shared\\_CookieConsentPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Shared\\Erro.cshtml",
+      "TargetPath": "Views\\Shared\\Erro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48417687858\\Documents\\Senai\\RoleTop\\MVC\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],

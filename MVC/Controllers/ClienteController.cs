@@ -39,13 +39,13 @@ namespace MVC.Controllers {
                 {
                     if (user.Senha.Equals(senha))
                     {
-                       switch (user.TipoUsuario)
+                        switch (user.TipoUsuario)
                         {
                             case (uint) TiposUsuario.CLIENTE:
                                 HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                                 HttpContext.Session.SetString(SESSION_CLIENTE_NOME, user.Nome);
                                 HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, user.TipoUsuario.ToString());
-                                return RedirectToAction("Historico", "Cliente");
+                                return RedirectToAction("Painel", "User");
 
                             case (uint) TiposUsuario.ADMINISTRADOR:
                                 HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);

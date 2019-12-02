@@ -10,8 +10,6 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css">
 </head>
 
-<body>
-
     @if("Home".Equals(@Model.NomeView))
         {
             <link rel="stylesheet" href="~/css/style.css" type="text/css">
@@ -36,6 +34,12 @@
         {
             <link rel="stylesheet" href="~/css/eventos.css" type="text/css">
         }
+    @if("Painel".Equals(@Model.NomeView))
+        {
+            <link rel="stylesheet" href="~/css/adm.css" type="text/css">
+        }
+<body>
+
 
 <!-- &*&*&*&*&*&*&*&*&*& HEADER - INICIO *&*&*&*&*&*&*&*&*&* -->
     <header>
@@ -63,14 +67,14 @@
 
         <!-- &*&* POPUP LOGIN *&*&* -->
         <div class="form-popup" id="myForm">
-                <form method="POST" action='@Url.Action("Login", "Home")' class="form-container">
+                <form method="POST" action='@Url.Action("Login", "Cliente")' class="form-container">
                     <h1>Login</h1>
                 
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Digite seu Email" name="email" required>
                 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Digite sua senha" name="psw" required>
+                    <label for="senha"><b>Password</b></label>
+                    <input type="password" placeholder="Digite sua senha" name="senha" required>
                 
                     <button type="submit" class="btn">Login</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
@@ -97,7 +101,7 @@
 </div>
 <hr>
 <section id="copy">
-    <a asp-controller="Home" asp-action="Index"><img id="logo-pe" src="img/logo.png" alt=""></a>
+    <a asp-controller="Home" asp-action="Index"><img id="logo-pe" src="~/img/logo.png" alt=""></a>
         <div id="contato">
             <h3>Contato</h3>
                 <address>
@@ -109,9 +113,9 @@
                 </address>
         </div>
     <div id="icon-rodape">
-        <img src="img/facebook.png" alt="" style="width: 55px; height: 55px;">
+        <img src="~/img/facebook.png" alt="" style="width: 55px; height: 55px;">
 <br>
-        <img src="img/instagram.png" alt="" style="width: 55px; height: 55px;">
+        <img src="~/img/instagram.png" alt="" style="width: 55px; height: 55px;">
     </div>
     <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8871329131725!2d-46.64847708538464!3d-23.536561566561176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5843deade6e3%3A0x124f377d06c7e71f!2sAlameda%20Bar%C3%A3o%20de%20Limeira%2C%20539%20-%20Campos%20El%C3%ADseos%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001202-001!5e0!3m2!1spt-BR!2sbr!4v1567885525655!5m2!1spt-BR!2sbr"
@@ -129,6 +133,10 @@
     @if("Espaco".Equals(@Model.NomeView))
     {
         <script src="~/js/Espaco/Galeria.js" type="text/javascript"></script>
+    }
+    @if("Painel".Equals(@Model.NomeView))
+    {
+        <script src="~/js/User/Usuario.js" type="text/javascript"></script>
     }
 
 <!-- &*&*&*&*&*&*&*&*&*& FOOTER - FIM *&*&*&*&*&*&*&*&*&* -->

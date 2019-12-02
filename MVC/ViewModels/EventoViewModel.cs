@@ -4,13 +4,13 @@ using MVC.Models;
 
 namespace MVC.ViewModels
 {
-    public class PedidoViewModel : BaseViewModel
+    public class EventoViewModel : BaseViewModel
     {
         public List<Adicional> Adicionais {get;set;}
         public Usuario Usuario {get;set;}
         public string NomeUsuario {get;set;}
 
-        public PedidoViewModel()
+        public EventoViewModel()
         {
             this.Adicionais = new List<Adicional>();
             this.Usuario = new Usuario();
