@@ -3,6 +3,7 @@ using MVC.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MVC.ViewModels;
+using MVC.Enums;
 
 namespace MVC.Controllers {
     public class ClienteController : AbstractController {
@@ -38,22 +39,30 @@ namespace MVC.Controllers {
                 {
                     if (user.Senha.Equals(senha))
                     {
-                        HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
-                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, user.Nome);
-                        return RedirectToAction("Historico", "Cliente");
+                       switch (user.TipoUsuario)
+                        {
+                            case (uint) TiposUsuario.CLIENTE:
+                                HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
+                                HttpContext.Session.SetString(SESSION_CLIENTE_NOME, user.Nome);
+                                HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, user.TipoUsuario.ToString());
+                                return RedirectToAction("Historico", "Cliente");
+
+                            case (uint) TiposUsuario.ADMINISTRADOR:
+                                HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
+                                HttpContext.Session.SetString(SESSION_CLIENTE_NOME, user.Nome);
+                                HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, user.TipoUsuario.ToString());
+                                return RedirectToAction("Dashboard", "Administrador");
+
+                            default: return View(new RespostaViewModel($"Tipo de usuário não encontrado"));
+                        }
                     }else
                     {
-                        return View("Erro", new RespostaViewModel($"Senha incorreta!"){
-                            NomeView = "Login"
-                        });
+                        return View("Erro", new RespostaViewModel($"Senha incorreta!"));
                     }
                 }else
                 {
                     
-                    return View ("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado")
-                    {
-                        NomeView = "Login"
-                    });
+                    return View ("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado"));
                 }
 
             } catch (Exception e) {
@@ -64,7 +73,7 @@ namespace MVC.Controllers {
     
         public IActionResult Historico ()
         {
-            var emailCliente = HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
+            var emailCliente = ObterUsuarioSession();
             var eventoCliente = eventoRepository.ObterTodosPorCliente(emailCliente);
 
             return View(new HistoricoViewModel()

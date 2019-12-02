@@ -6,8 +6,9 @@ namespace MVC.Controllers
 {
     public class AbstractController : Controller
     {
-        protected const string SESSION_CLIENTE_EMAIL = "cliente_email";
-        protected const string SESSION_CLIENTE_NOME = "cliente_nome";
+        protected const string SESSION_CLIENTE_EMAIL = "usuario_email";
+        protected const string SESSION_CLIENTE_NOME = "usuario_nome";
+        protected const string SESSION_CLIENTE_TIPO = "usuario_tipo";
 
         protected string ObterUsuarioSession()
         {
@@ -26,6 +27,17 @@ namespace MVC.Controllers
             if (!string.IsNullOrEmpty(nomeUsuario))
             {
                 return nomeUsuario;
+            }else
+            {
+                return "";
+            }
+        }
+        protected string ObterUsuarioTipoSession()
+        {
+            var tipoUsuario = HttpContext.Session.GetString(SESSION_CLIENTE_TIPO);
+            if (!string.IsNullOrEmpty(tipoUsuario))
+            {
+                return tipoUsuario;
             }else
             {
                 return "";

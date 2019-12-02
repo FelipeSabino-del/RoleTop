@@ -63,7 +63,7 @@
 
         <!-- &*&* POPUP LOGIN *&*&* -->
         <div class="form-popup" id="myForm">
-                <form method="POST" action='@Url.Action("Login", "Cliente")' class="form-container">
+                <form method="POST" action='@Url.Action("Login", "Home")' class="form-container">
                     <h1>Login</h1>
                 
                     <label for="email"><b>Email</b></label>
@@ -72,7 +72,7 @@
                     <label for="psw"><b>Password</b></label>
                     <input type="password" placeholder="Digite sua senha" name="psw" required>
                 
-                    <a href="usuario.html"><button type="submit" class="btn">Login</button></a>
+                    <button type="submit" class="btn">Login</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                     <p>Não tem login? Faça seu <a asp-controller="Cadastro" asp-action="Index">cadastro aqui</a></p>
                 </form>

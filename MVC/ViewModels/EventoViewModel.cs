@@ -6,15 +6,13 @@ namespace MVC.ViewModels
 {
     public class PedidoViewModel : BaseViewModel
     {
-        // public List<Hamburguer> Hamburgueres {get;set;}
-        // public List<Shake> Shakes {get;set;}
+        public List<Adicional> Adicionais {get;set;}
         public Usuario Usuario {get;set;}
         public string NomeUsuario {get;set;}
 
         public PedidoViewModel()
         {
-            // this.Hamburgueres = new List<Hamburguer>();
-            // this.Shakes = new List<Shake>();
+            this.Adicionais = new List<Adicional>();
             this.Usuario = new Usuario();
             this.NomeUsuario = "?";
         }
