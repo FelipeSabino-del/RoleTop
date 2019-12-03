@@ -7,5 +7,6 @@ namespace MVC.ViewModels
     {
         public List<Evento> Eventos {get;set;}
         public List<Adicional> Adicionais {get;set;}
+
     }
 }

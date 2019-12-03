@@ -41,53 +41,53 @@
         <div class="row">
             <div class="col-75">
                 <div class="container">
-                <form action="pagamento.html">
-                
-                    <div class="row">
-                    <div class="col-50">
-                        <label for="tipo-evento"><i class="fa fa-glass"></i> Tipo de evento</label>
-                        <select id="tipo-evento" name="tipo-evento">
-                            <option value="social">Social</option>
-                            <option value="casamento">Casamento</option>
-                            <option value="universitário">Universitário</option>
-                            <option value="corporativo">Corporativo</option>
-                        </select>
-                        <label for="numero-pessoas"><i class="fa fa-user"></i>Número máximo de pessoas</label>
-                        <input type="number" id="numero-pessoas" name="numero-pessoas" placeholder="Número">
-
-                        <label for="adicionais"><i class="fa fa-plus"></i> Serviços adicionais</label>
-                        <select>
-                            <option value="">Selecione</option>
-                            @foreach(var adicional in Model.Adicionais)
-                                {
-                                    <option value=@adicional.Nome>@adicional.Nome por @adicional.Preco</option>
-                                }
-                        </select>
-
-                        <label for="descriçao"><i class="fa fa-comment"></i> Descrição do evento e data</label>
-                        <input type="text" id="descriçao" name="descriçao" placeholder="Conte-nos mais (data necessária)">
-                    </div>
-
-                    <div class="col-50">
-                        <h3>Pagamento</h3>
-                        <label for="fname">Cartões aceitos</label>
-                        <div class="icon-container">
-                        <i class="fa fa-cc-visa" style="color:navy;"></i>
-                        <i class="fa fa-cc-amex" style="color:blue;"></i>
-                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                        <i class="fa fa-cc-discover" style="color:orange;"></i>
-                        </div>
-                        <label for="cname">Nome como está no cartão</label>
-                        <input type="text" id="cname" name="cardname" placeholder="Jeferson Silva">
-                        <label for="ccnum">Número do cartão</label>
-                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                        <label for="expmonth">Validade</label>
-                        <input type="text" id="expmonth" name="expmonth" placeholder="0x/1x"> 
-                        </div>
+                    <form method="POST" action='@Url.Action("Registrar","Pedido")'>
                     
-                    </div>
-                    <input type="submit" value="Realizar pedido" class="btn">
-                </form>
+                        <div class="row">
+                            <div class="col-50">
+                            <label for="tipo-evento"><i class="fa fa-glass"></i> Tipo de evento</label>
+                            <select id="tipo-evento" name="tipo_evento" required>
+                                <option value="social">Social</option>
+                                <option value="casamento">Casamento</option>
+                                <option value="universitário">Universitário</option>
+                                <option value="corporativo">Corporativo</option>
+                            </select>
+                            <label for="numero-pessoas"><i class="fa fa-user"></i>Número máximo de pessoas</label>
+                            <input type="number" id="numero-pessoas" name="numpessoas" placeholder="Número">
+
+                            <label for="adicionais"><i class="fa fa-plus"></i> Serviços adicionais</label>
+                            <select id="adicionais" name="adicional" required>
+                                <option value="" disabled selected>Selecione</option>
+                                @foreach(var adicional in Model.Adicionais)
+                                    {
+                                        <option value=@adicional.Nome>@adicional.Nome por @adicional.Preco</option>
+                                    }
+                            </select>
+
+                            <label for="descriçao"><i class="fa fa-comment"></i>data</label>
+                            <input type="date" id="descriçao" name="data">
+                        </div>
+
+                        <div class="col-50">
+                            <h3>Pagamento</h3>
+                            <label for="fname">Cartões aceitos</label>
+                            <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            <label for="cname">Nome como está no cartão</label>
+                            <input type="text" id="cname" name="cardname" placeholder="Jeferson Silva">
+                            <label for="ccnum">Número do cartão</label>
+                            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                            <label for="expmonth">Validade</label>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="0x/1x"> 
+                            </div>
+                        
+                        </div>
+                        <input type="submit" value="Realizar pedido" class="btn">
+                    </form>
                 </div>
             </div>
             <div class="col-25">

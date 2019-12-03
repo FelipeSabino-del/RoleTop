@@ -4,6 +4,7 @@ using MVC.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MVC.ViewModels;
+using MVC.Enums;
 
 namespace MVC.Controllers {
     public class CadastroController : AbstractController {
@@ -23,6 +24,7 @@ namespace MVC.Controllers {
             ViewData["Action"] = "Cadastro";
             try {
                 Usuario usuario = new Usuario (form["nome"], form["cpf"], form["telefone"], form["senha"], form["email"], DateTime.Parse (form["data-nascimento"]));
+                usuario.TipoUsuario = (uint) TiposUsuario.CLIENTE;
                 userRepository.Inserir (usuario);
                 return View ("Sucesso", new RespostaViewModel(){
                     NomeView = "Cadastro"
