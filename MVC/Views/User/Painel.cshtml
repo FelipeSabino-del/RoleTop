@@ -1,4 +1,4 @@
-@model MVC.ViewModels.HistoricoViewModel
+@model MVC.ViewModels.EventoViewModel
 <main>
 <br>
 <br>
@@ -25,14 +25,7 @@
             <h3>Meus eventos</h3>
 <br>
 <br>
-        @foreach(var evento in Model.Eventos) {
-                <tr>
-                    <td>@evento.DataDoEvento</td>
-                    <td>@evento.Adicional.Nome</td>
-                    <td>@evento.Adicional.Preco</td>
-                    <td>@evento.PrecoTotal</td>
-                </tr>
-            }
+        
         </div>
         
         <div id="Paris" class="tabcontent">
@@ -41,31 +34,41 @@
         <div class="row">
             <div class="col-75">
                 <div class="container">
-                    <form method="POST" action='@Url.Action("Registrar","Pedido")'>
+                    <form method="POST" action='@Url.Action("Registrar","User")'>
                     
                         <div class="row">
                             <div class="col-50">
-                            <label for="tipo-evento"><i class="fa fa-glass"></i> Tipo de evento</label>
-                            <select id="tipo-evento" name="tipo_evento" required>
+                            <label for="tipo-evento"><i class="fa fa-glass"></i>Tipo de evento</label>
+                            <select id="tipo-evento" name="tipo_evento" placeholder="Tipo de evento" required>
                                 <option value="social">Social</option>
                                 <option value="casamento">Casamento</option>
                                 <option value="universitário">Universitário</option>
                                 <option value="corporativo">Corporativo</option>
                             </select>
                             <label for="numero-pessoas"><i class="fa fa-user"></i>Número máximo de pessoas</label>
-                            <input type="number" id="numero-pessoas" name="numpessoas" placeholder="Número">
+                            <select type="number" id="numero-pessoas" name="numpessoas" placeholder="Número de pessoas">
+                                <option value="" disabled selected>Selecione o número de pessoas</option>
+                                @foreach (var numPessoas in Model.NumeroPessoas)
+                                {
+                                    <option value=@numPessoas.Nome>Para até @numPessoas.Nome pessoas - @numPessoas.Preco$</option>
+                                }
+                            </select>
 
                             <label for="adicionais"><i class="fa fa-plus"></i> Serviços adicionais</label>
                             <select id="adicionais" name="adicional" required>
                                 <option value="" disabled selected>Selecione</option>
                                 @foreach(var adicional in Model.Adicionais)
                                     {
-                                        <option value=@adicional.Nome>@adicional.Nome por @adicional.Preco</option>
+                                        <option value=@adicional.Nome>@adicional.Nome por @adicional.Preco$</option>
                                     }
                             </select>
 
                             <label for="descriçao"><i class="fa fa-comment"></i>data</label>
                             <input type="date" id="descriçao" name="data">
+<br>
+<br>
+<br>
+                            <strong>O espaço custa de base Dez Mil Reais</strong>
                         </div>
 
                         <div class="col-50">
@@ -110,7 +113,7 @@
         <p>DADOS DO USUÁRIO</p>
         </div>
 <br>
-<br>
-<br>
+<main>
+<main>
 <hr>
 </main>

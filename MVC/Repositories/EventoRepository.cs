@@ -103,7 +103,7 @@ namespace MVC.Repositories
         {
             Usuario user = evento.Usuario;
             Adicional ad = evento.Adicional;
-            return $"id={evento.Id};status_evento={evento.Status};usuario_nome={user.Nome};usuario_cpf={user.Cpf};usuario_telefone={user.Telefone};usuario_email={user.Email};adicional_nome={ad.Nome};adicional_preco={ad.Preco};data_evento={evento.DataDoEvento};preco_total={evento.PrecoTotal}";
+            return $"id={evento.Id};status_evento={evento.Status};adicional_nome={ad.Nome};adicional_preco={ad.Preco};data_evento={evento.DataDoEvento};preco_total={evento.PrecoTotal}";
         }
     }
 }

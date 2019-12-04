@@ -20,21 +20,24 @@ namespace MVC.Controllers {
         }
 
         public IActionResult CadastrarCliente (IFormCollection form) {
-            ViewData["NomeView"] = "msgfinal";
             ViewData["Action"] = "Cadastro";
             try {
                 Usuario usuario = new Usuario (form["nome"], form["cpf"], form["telefone"], form["senha"], form["email"], DateTime.Parse (form["data-nascimento"]));
                 usuario.TipoUsuario = (uint) TiposUsuario.CLIENTE;
                 userRepository.Inserir (usuario);
                 return View ("Sucesso", new RespostaViewModel(){
-                    NomeView = "Cadastro"
+                    NomeView = "Cadastro",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
                 });
                 
 
             } catch (Exception e) {
                 System.Console.WriteLine (e.StackTrace);
                 return View ("Erro", new RespostaViewModel(){
-                    NomeView = "Cadastro"
+                    NomeView = "Cadastro",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
                 });
             }
 

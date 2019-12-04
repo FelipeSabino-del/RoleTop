@@ -7,7 +7,7 @@ namespace MVC.Models
     {
         public ulong Id {get;set;}
         public string NomeEvento {get;set;}
-        public uint NumPessoa {get;set;}
+        public NumPessoas NumPessoa {get;set;}
         public Usuario Usuario {get; set;}
         public DateTime DataDoEvento {get; set;}
         public Adicional Adicional {get;set;}
