@@ -1,1 +1,2 @@
-tipo_usuario=1;nome=Felipe;email=felipedomingos2011@hotmail.com;senha=gss123;cpf=48417687858;telefone=987987987;data_nascimento=01/09/2000 00:00:00
+tipo_usuario=0;nome=Felipe;email=felipedomingos2011@hotmail.com;senha=gss123;cpf=48417687858;telefone=987987987;data_nascimento=01/09/2000 00:00:00
+tipo_usuario=1;nome=Guilherme;email=email@email.com;senha=gss123;cpf=48417687858;telefone=9897949596;data_nascimento=10/10/1010 00:00:00

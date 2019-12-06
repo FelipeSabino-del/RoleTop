@@ -1,3 +1,4 @@
+@model MVC.ViewModels.DashboardViewModel
 <main>
 <br>
 <br>
@@ -27,15 +28,15 @@
                 <div id="painel">
                     <div class="box-status-pedidos aprovados">
                         <h4>Aprovados</h4>
-                        <p>3</p>
+                        <p>@Model.EventosAprovados</p>
                     </div>
                     <div class="box-status-pedidos pendentes">
                         <h4>Pendentes</h4>
-                        <p>3</p>
+                        <p>@Model.EventosPendentes</p>
                     </div>
                     <div class="box-status-pedidos reprovados">
                         <h4>Reprovados</h4>
-                        <p>3</p>
+                        <p>@Model.EventosReprovados</p>
                     </div>
                 </div>
             </section>
@@ -43,46 +44,40 @@
             <section id="lista-pedidos">
                 <h3>Lista de pedidos</h3>
                 <table>
-                    <thead>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Nome do evento</th>
+                        <th rowspan="2">Data</th>
+                        <th rowspan="2">Número de pessoas</th>
+                        <th rowspan="2">Adicionais</th>
+                        <th colspan="2" rowspan="2">Aprovar</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <p>Eventos atualizados em @DateTime.Now</p>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach(var eventos in Model.Eventos )
+                    {
                         <tr>
-                            <th rowspan="2">Nome</th>
-                            <th rowspan="2">Tipo de evento</th>
-                            <th colspan="2">Adicionais</th>
-                            <th colspan="2" rowspan="2">Aprovar</th>
+                            <td>@eventos.Espaço.Nome</td>
+                            <td>@eventos.DataDoEvento</td>
+                            <td>@eventos.NumPessoa.Nome</td>
+                            <td>@eventos.Adicional.Nome</td>
+                            <td><a href='@Url.Action("Aprovar", "User", new {id = @eventos.Id})'><i class="fas fa-check"></i></a></td>
+                            <td><a href='@Url.Action("Reprovar", "User", new {id = @eventos.Id})'><i class="fas fa-times"></i></a></td>
                         </tr>
-                        <tr>
-                            <th><i class="fas fa-hamburger"></i></th>
-                            <th><i class="fas fa-mug-hot"></i></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <td colspan="6">
-                                <p>Eventos registrados no último dia</p>
-                            </td>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr>
-                            <td>Cesar Sportore</td>
-                            <td>Social</td>
-                            <td>Luz</td>
-                            <td>Sem som</td>
-                            <td><a href="#"><i class="fa fa-check"></i></a></td>
-                            <td><a href="#"><i class="fa fa-times"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>Alexandre Fukaya</td>
-                            <td>Corporativo</td>
-                            <td>Luz</td>
-                            <td>Som</td>
-                            <td><a href="#"><i class="fa fa-check"></i></a></td>
-                            <td><a href="#"><i class="fa fa-times"></i></a></td>
-                        </tr>
-                    </tbody>
-                </table>
+                    }
+                </tbody>
+            </table>
             </section>
         </div>
         

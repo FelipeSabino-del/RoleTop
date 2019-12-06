@@ -6,28 +6,99 @@
 <br>
         <div id="user">
             <p>
-                <img src="~/img/usuario.png" alt="" style="width: 200px; height: 200px">
+                <img src="~/img/usuario.png" alt="" style="width: 100px; height: 100px">
             </p>
             <p id="p2">
                 @Model.UsuarioNome
             </p>
         </div>
+                        
 <br>
 <br>
 <br>
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Meus eventos</button>
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Meus eventos aprovados</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Meus eventos pendentes</button>
             <button class="tablinks" onclick="openCity(event, 'Paris')">Agendar evento / orçamento</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Informações pessoais</button>
         </div>
-        
+<br>
+<br>
+    <section class="lista-pedidos">
         <div id="London" class="tabcontent">
-            <h3>Meus eventos</h3>
+        <h3>Meus eventos aprovados</h3>
 <br>
 <br>
-        
+        <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Nome do evento</th>
+                        <th rowspan="2">Data</th>
+                        <th rowspan="2">Número de pessoas</th>
+                        <th rowspan="2">Adicionais</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <p>Eventos atualizados em @DateTime.Now</p>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach(var eventos in Model.Eventos)
+                    {
+                        if (eventos.Status == 1)
+                        {                            
+                            <tr>
+                                <td>@eventos.Espaço.Nome</td>
+                                <td>@eventos.DataDoEvento</td>
+                                <td>@eventos.NumPessoa.Nome</td>
+                                <td>@eventos.Adicional.Nome</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
         </div>
-        
+    </section> 
+    <section class="lista-pedidos">
+        <div id="Tokyo" class="tabcontent">
+        <h3>Meus eventos pendentes</h3>
+<br>
+<br>
+        <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Nome do evento</th>
+                        <th rowspan="2">Data</th>
+                        <th rowspan="2">Número de pessoas</th>
+                        <th rowspan="2">Adicionais</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <p>Eventos atualizados em @DateTime.Now</p>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach(var eventos in Model.Eventos)
+                    {
+                        if (eventos.Status == 0)
+                        {                            
+                            <tr>
+                                <td>@eventos.Espaço.Nome</td>
+                                <td>@eventos.DataDoEvento</td>
+                                <td>@eventos.NumPessoa.Nome</td>
+                                <td>@eventos.Adicional.Nome</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
         <div id="Paris" class="tabcontent">
             <h3>Agendar evento</h3>
 <br>
@@ -40,10 +111,12 @@
                             <div class="col-50">
                             <label for="tipo-evento"><i class="fa fa-glass"></i>Tipo de evento</label>
                             <select id="tipo-evento" name="tipo_evento" placeholder="Tipo de evento" required>
-                                <option value="social">Social</option>
-                                <option value="casamento">Casamento</option>
-                                <option value="universitário">Universitário</option>
-                                <option value="corporativo">Corporativo</option>
+                                <option value="">Selecione seu tipo de evento</option>
+                                @foreach (var espaços in Model.Espaços)
+                                {
+                                    <option value="@espaços.Nome">Evento @espaços.Nome custa @espaços.Preco</option>
+                                }
+                                
                             </select>
                             <label for="numero-pessoas"><i class="fa fa-user"></i>Número máximo de pessoas</label>
                             <select type="number" id="numero-pessoas" name="numpessoas" placeholder="Número de pessoas">
@@ -64,7 +137,7 @@
                             </select>
 
                             <label for="descriçao"><i class="fa fa-comment"></i>data</label>
-                            <input type="date" id="descriçao" name="data">
+                            <input type="date" id="descriçao" name="data_evento">
 <br>
 <br>
 <br>
@@ -106,12 +179,6 @@
             </div> 
         </div>
         
-        <div id="Tokyo" class="tabcontent">
-        <h3>Informações pessoais</h3>
-        <br>
-        <br>
-        <p>DADOS DO USUÁRIO</p>
-        </div>
 <br>
 <main>
 <main>

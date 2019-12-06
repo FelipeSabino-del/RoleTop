@@ -14,6 +14,7 @@ namespace MVC.Controllers
         EventoRepository eventoRepository = new EventoRepository();
         AdicionalRepository adicionalRepository = new AdicionalRepository();
         NumPessoasRepository numPessoasRepository = new NumPessoasRepository();
+        EspaçoRepository espaçoRepository = new EspaçoRepository();
 
 
         [HttpGet]
@@ -21,10 +22,13 @@ namespace MVC.Controllers
         {
             var Adicionais = adicionalRepository.ObterTodos();
             var numPessoas = numPessoasRepository.ObterTodos();
+            var eventos = eventoRepository.ObterTodos();
 
             EventoViewModel pvm = new EventoViewModel(); 
             pvm.Adicionais = adicionalRepository.ObterTodos();
             pvm.NumeroPessoas = numPessoasRepository.ObterTodos();
+            pvm.Espaços = espaçoRepository.ObterTodos();
+            pvm.Eventos = eventoRepository.ObterTodos();
 
             var emailCliente = ObterUsuarioSession();
             if (!string.IsNullOrEmpty(emailCliente))
@@ -50,12 +54,14 @@ namespace MVC.Controllers
             var nomeAdicional = form["adicional"];
             Adicional adicional = new Adicional(nomeAdicional, adicionalRepository.ObterPrecoDe(nomeAdicional));
             evento.Adicional = adicional;
-            evento.NomeEvento = form["tipo_evento"];
-            evento.DataDoEvento = DateTime.Parse(form["data"]);
+            evento.DataDoEvento = DateTime.Parse(form["data_evento"]);
             var numPessoas = form["numpessoas"];
             NumPessoas pessoas = new NumPessoas(numPessoas, numPessoasRepository.ObterPrecoDe(numPessoas));
             evento.NumPessoa = pessoas;
-            evento.PrecoTotal = adicionalRepository.ObterPrecoDe(nomeAdicional) + numPessoasRepository.ObterPrecoDe(numPessoas) + 10000;
+            var nomeEspaço = form["tipo_evento"];
+            Espaço espaço = new Espaço(nomeEspaço, espaçoRepository.ObterPrecoDe(nomeEspaço));
+            evento.Espaço = espaço;
+            evento.PrecoTotal = adicionalRepository.ObterPrecoDe(nomeAdicional) + numPessoasRepository.ObterPrecoDe(numPessoas) + espaçoRepository.ObterPrecoDe(nomeEspaço) +10000;
 
             if (eventoRepository.Inserir(evento))
             {

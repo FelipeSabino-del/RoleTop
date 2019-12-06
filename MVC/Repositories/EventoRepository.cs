@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using MVC.Models;
+using MVC.Enums;
 
 namespace MVC.Repositories
 {
@@ -74,13 +75,15 @@ namespace MVC.Repositories
             foreach (var linha in linhas)
             {
                 Evento evento = new Evento();
-                evento.Usuario = new Usuario();
-                evento.Usuario.Nome = ExtrairValorDoCampo("usuario_nome", linha);
-                evento.Usuario.Cpf = ExtrairValorDoCampo("usuario_cpf", linha);
-                evento.Usuario.Telefone = ExtrairValorDoCampo("usuario_telefone", linha);
-                evento.Usuario.Email = ExtrairValorDoCampo("usuario_email", linha);
+                evento.Id = ulong.Parse(ExtrairValorDoCampo("id", linha));
+                evento.Status = uint.Parse(ExtrairValorDoCampo("status_evento", linha));
                 evento.Adicional.Nome = ExtrairValorDoCampo("adicional_nome", linha);
                 evento.Adicional.Preco = double.Parse(ExtrairValorDoCampo("adicional_preco", linha));
+                evento.NumPessoa.Nome = ExtrairValorDoCampo("numpessoa_nome", linha);
+                evento.NumPessoa.Preco = double.Parse(ExtrairValorDoCampo("numpessoa_preco", linha));
+                evento.Espaço.Nome = ExtrairValorDoCampo("espaco_nome", linha);
+                evento.Espaço.Preco = double.Parse(ExtrairValorDoCampo("espaco_preco", linha));
+                evento.DataDoEvento = DateTime.Parse(ExtrairValorDoCampo("data_evento", linha));
 
                 eventos.Add(evento);
             }
@@ -98,12 +101,15 @@ namespace MVC.Repositories
             }
             return null;
         }
+        
 
         private string PrepararEventoCSV(Evento evento)
         {
             Usuario user = evento.Usuario;
             Adicional ad = evento.Adicional;
-            return $"id={evento.Id};status_evento={evento.Status};adicional_nome={ad.Nome};adicional_preco={ad.Preco};data_evento={evento.DataDoEvento};preco_total={evento.PrecoTotal}";
+            NumPessoas np = evento.NumPessoa;
+            Espaço ep = evento.Espaço;
+            return $"id={evento.Id};status_evento={evento.Status};adicional_nome={ad.Nome};adicional_preco={ad.Preco};numpessoa_nome={np.Nome};numpessoa_preco={np.Preco};espaco_nome={ep.Nome};espaco_preco={ep.Preco};data_evento={evento.DataDoEvento};preco_total={evento.PrecoTotal}";
         }
     }
 }
