@@ -54,7 +54,21 @@
                     <li class="linha"><a asp-controller="Historia" asp-action="Index">O Role</a></li>
                     <li class="linha"><a asp-controller="Espaco" asp-action="Index">Espaço</a></li>
                     <li class="linha"><a asp-controller="Home" asp-action="Index">Nossos eventos</a></li>
-                    <li class="linha open-button" onclick="openForm()">Cadastro/login</li>
+                    @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                    {
+                        <li class="linha open-button" onclick="openForm()">Cadastro/login</li>
+                    }else
+                    {
+                        @if (@Model.UsuarioEmail == "admin@admin.com")
+                        {
+                            <li class="linha"><a onclick="toggleMobileMenu()" asp-controller="Cliente" asp-action="Logoff">Logoff</a></li>
+                            <li class="linha"><a onclick="toggleMobileMenu()" asp-controller="Administrador" asp-action="Dashboard">Dashboard</a></li>
+                        }else{
+
+                            <li class="linha"><a onclick="toggleMobileMenu()" asp-controller="Cliente" asp-action="Logoff">Logoff</a></li>
+                            <li class="linha"><a onclick="toggleMobileMenu()" asp-controller="User" asp-action="Painel">Usuário</a></li>
+                        }
+                    }
                     <li id="linha-contato"><a href="#copy">Contato</a></li>
                     <li>
                         <a href="javascript:void(0);" class="icon" onclick="myFunction()">

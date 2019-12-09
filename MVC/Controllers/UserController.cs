@@ -50,7 +50,12 @@ namespace MVC.Controllers
         public IActionResult Registrar(IFormCollection form)
         {
             Evento evento = new Evento();
-
+            Usuario user = new Usuario();
+             var emailCliente = ObterUsuarioSession();
+            if (!string.IsNullOrEmpty(emailCliente))
+            {
+                evento.Usuario = userRepository.ObterPor(emailCliente);
+            }
             var nomeAdicional = form["adicional"];
             Adicional adicional = new Adicional(nomeAdicional, adicionalRepository.ObterPrecoDe(nomeAdicional));
             evento.Adicional = adicional;

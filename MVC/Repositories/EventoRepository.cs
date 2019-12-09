@@ -84,6 +84,7 @@ namespace MVC.Repositories
                 evento.Espaço.Nome = ExtrairValorDoCampo("espaco_nome", linha);
                 evento.Espaço.Preco = double.Parse(ExtrairValorDoCampo("espaco_preco", linha));
                 evento.DataDoEvento = DateTime.Parse(ExtrairValorDoCampo("data_evento", linha));
+                evento.Usuario.Email = ExtrairValorDoCampo("email_user", linha);
 
                 eventos.Add(evento);
             }
@@ -104,12 +105,12 @@ namespace MVC.Repositories
         
 
         private string PrepararEventoCSV(Evento evento)
-        {
+        {  
             Usuario user = evento.Usuario;
             Adicional ad = evento.Adicional;
             NumPessoas np = evento.NumPessoa;
             Espaço ep = evento.Espaço;
-            return $"id={evento.Id};status_evento={evento.Status};adicional_nome={ad.Nome};adicional_preco={ad.Preco};numpessoa_nome={np.Nome};numpessoa_preco={np.Preco};espaco_nome={ep.Nome};espaco_preco={ep.Preco};data_evento={evento.DataDoEvento};preco_total={evento.PrecoTotal}";
+            return $"id={evento.Id};status_evento={evento.Status};adicional_nome={ad.Nome};adicional_preco={ad.Preco};numpessoa_nome={np.Nome};numpessoa_preco={np.Preco};espaco_nome={ep.Nome};espaco_preco={ep.Preco};data_evento={evento.DataDoEvento};preco_total={evento.PrecoTotal};email_user={user.Email}";
         }
     }
 }
