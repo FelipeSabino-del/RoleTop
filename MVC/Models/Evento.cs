@@ -17,6 +17,7 @@ namespace MVC.Models
 
         public Evento()
         {
+            this.Usuario = new Usuario();
             this.Adicional = new Adicional();
             this.NumPessoa = new NumPessoas();
             this.Espaço = new Espaço();

@@ -22,15 +22,14 @@ namespace MVC.Controllers
         {
             var Adicionais = adicionalRepository.ObterTodos();
             var numPessoas = numPessoasRepository.ObterTodos();
-            var eventos = eventoRepository.ObterTodos();
+            var emailCliente = ObterUsuarioSession();
 
             EventoViewModel pvm = new EventoViewModel(); 
             pvm.Adicionais = adicionalRepository.ObterTodos();
             pvm.NumeroPessoas = numPessoasRepository.ObterTodos();
             pvm.Espaços = espaçoRepository.ObterTodos();
-            pvm.Eventos = eventoRepository.ObterTodos();
+            pvm.Eventos = eventoRepository.ObterTodosPorCliente(emailCliente);
 
-            var emailCliente = ObterUsuarioSession();
             if (!string.IsNullOrEmpty(emailCliente))
             {
                 pvm.Usuario = userRepository.ObterPor(emailCliente);
@@ -50,13 +49,9 @@ namespace MVC.Controllers
         public IActionResult Registrar(IFormCollection form)
         {
             Evento evento = new Evento();
-            Usuario user = new Usuario();
-             var emailCliente = ObterUsuarioSession();
-            if (!string.IsNullOrEmpty(emailCliente))
-            {
-                evento.Usuario = userRepository.ObterPor(emailCliente);
-            }
+            var user = userRepository.ObterPor(ObterUsuarioSession());
             var nomeAdicional = form["adicional"];
+            evento.Usuario.Email = user.Email;
             Adicional adicional = new Adicional(nomeAdicional, adicionalRepository.ObterPrecoDe(nomeAdicional));
             evento.Adicional = adicional;
             evento.DataDoEvento = DateTime.Parse(form["data_evento"]);

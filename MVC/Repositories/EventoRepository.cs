@@ -75,6 +75,7 @@ namespace MVC.Repositories
             foreach (var linha in linhas)
             {
                 Evento evento = new Evento();
+
                 evento.Id = ulong.Parse(ExtrairValorDoCampo("id", linha));
                 evento.Status = uint.Parse(ExtrairValorDoCampo("status_evento", linha));
                 evento.Adicional.Nome = ExtrairValorDoCampo("adicional_nome", linha);
@@ -84,6 +85,7 @@ namespace MVC.Repositories
                 evento.Espaço.Nome = ExtrairValorDoCampo("espaco_nome", linha);
                 evento.Espaço.Preco = double.Parse(ExtrairValorDoCampo("espaco_preco", linha));
                 evento.DataDoEvento = DateTime.Parse(ExtrairValorDoCampo("data_evento", linha));
+                evento.PrecoTotal =double.Parse(ExtrairValorDoCampo("preco_total", linha));
                 evento.Usuario.Email = ExtrairValorDoCampo("email_user", linha);
 
                 eventos.Add(evento);
@@ -106,11 +108,7 @@ namespace MVC.Repositories
 
         private string PrepararEventoCSV(Evento evento)
         {  
-            Usuario user = evento.Usuario;
-            Adicional ad = evento.Adicional;
-            NumPessoas np = evento.NumPessoa;
-            Espaço ep = evento.Espaço;
-            return $"id={evento.Id};status_evento={evento.Status};adicional_nome={ad.Nome};adicional_preco={ad.Preco};numpessoa_nome={np.Nome};numpessoa_preco={np.Preco};espaco_nome={ep.Nome};espaco_preco={ep.Preco};data_evento={evento.DataDoEvento};preco_total={evento.PrecoTotal};email_user={user.Email}";
+            return $"id={evento.Id};status_evento={evento.Status};adicional_nome={evento.Adicional.Nome};adicional_preco={evento.Adicional.Preco};numpessoa_nome={evento.NumPessoa.Nome};numpessoa_preco={evento.NumPessoa.Preco};espaco_nome={evento.Espaço.Nome};espaco_preco={evento.Espaço.Preco};data_evento={evento.DataDoEvento.ToShortDateString()};preco_total={evento.PrecoTotal};email_user={evento.Usuario.Email}";
         }
     }
 }
