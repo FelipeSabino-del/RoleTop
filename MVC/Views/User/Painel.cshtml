@@ -120,7 +120,7 @@
                                 <option value="" disabled selected>Selecione o número de pessoas</option>
                                 @foreach (var numPessoas in Model.NumeroPessoas)
                                 {
-                                    <option value=@numPessoas.Nome>Para até @numPessoas.Nome pessoas - @numPessoas.Preco$</option>
+                                    <option value=@numPessoas.Nome>Para até @numPessoas.Nome pessoas - @numPessoas.Preco</option>
                                 }
                             </select>
 
@@ -129,7 +129,7 @@
                                 <option value="" disabled selected>Selecione</option>
                                 @foreach(var adicional in Model.Adicionais)
                                     {
-                                        <option value=@adicional.Nome>@adicional.Nome por @adicional.Preco$</option>
+                                        <option value=@adicional.Nome>@adicional.Nome por @adicional.Preco</option>
                                     }
                             </select>
 

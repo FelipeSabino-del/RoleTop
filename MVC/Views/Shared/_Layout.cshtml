@@ -53,7 +53,7 @@
                     <li class="linha"><a asp-controller="Home" asp-action="Index">Home</a></li>
                     <li class="linha"><a asp-controller="Historia" asp-action="Index">O Role</a></li>
                     <li class="linha"><a asp-controller="Espaco" asp-action="Index">Espaço</a></li>
-                    <li class="linha"><a asp-controller="Home" asp-action="Index">Nossos eventos</a></li>
+                    <li class="linha"><a href='@Url.Action("Index","Home")#copy'>Nossos eventos</a></li>
                     @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
                     {
                         <li class="linha open-button" onclick="openForm()">Cadastro/login</li>
