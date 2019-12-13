@@ -13,8 +13,8 @@
 <br>
 <br>
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Eventos de usuários</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Informações pessoais</button>
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Eventos pendentes de usuários</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Eventos já aprovados</button>
         </div>
         
         <div id="London" class="tabcontent">
@@ -80,12 +80,44 @@
         
         
         
+       <section class="lista-pedidos">
         <div id="Tokyo" class="tabcontent">
-        <h3>Informações pessoais</h3>
-        <br>
-        <br>
-        <p>DADOS DO USUÁRIO</p>
+        <h3>Eventos aprovados</h3>
+<br>
+<br>
+        <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Nome do evento</th>
+                        <th rowspan="2">Data</th>
+                        <th rowspan="2">Número de pessoas</th>
+                        <th rowspan="2">Adicionais</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <p>Eventos atualizados em @DateTime.Now</p>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach(var eventos in Model.Eventos)
+                    {
+                        if (eventos.Status == 1)
+                        {                            
+                            <tr>
+                                <td>@eventos.Espaço.Nome</td>
+                                <td>@eventos.DataDoEvento.ToShortDateString()</td>
+                                <td>@eventos.NumPessoa.Nome</td>
+                                <td>@eventos.Adicional.Nome</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
         </div>
+    </section>
 <br>
 <br>
 <br>
