@@ -251,7 +251,7 @@ nav{
     border: 4px #ffc600;
     border-style: double;
     text-align: center;
-    text-decoration: underline;
+    padding: 0.5em;
 }
 
 #comentario{
@@ -471,6 +471,12 @@ img {vertical-align: middle; z-index: -1;}
     border: none;
     top: -0.5em;
   }
+
+  #jef {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
 
   .linha, #linha-contato{
     border-right: none;

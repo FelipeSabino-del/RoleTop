@@ -42,48 +42,34 @@
 <br>
 <hr>
 <br>
-    <h2>Futuros eventos</h2>
-<br>
-<br>
-<br>
-    @if (true)
+    @if (@Model.Eventos.Count > 0)
     {         
+        <h2>Futuros eventos</h2>
+<br>
+<br>
+<br>
         <div id="jef">
         @foreach (var evento in @Model.Eventos){       
-            <div>                
                 @if (evento.Status == 1 && evento.Id == 1)
                 {
-                    <p>Evento @evento.Espaço.Nome <br> Dia @evento.DataDoEvento.ToShortDateString()</p>                    
+                    <div>                
+                        <p>Evento @evento.Espaço.Nome <br> Dia @evento.DataDoEvento.ToShortDateString()</p>                    
+                    </div>
                 }                    
-            </div>
-            <div>                    
                 @if (evento.Status == 1 && evento.Id == 2)
                 {
-                    <p>Evento @evento.Espaço.Nome <br> Dia @evento.DataDoEvento.ToShortDateString()</p>
+                    <div>                    
+                        <p>Evento @evento.Espaço.Nome <br> Dia @evento.DataDoEvento.ToShortDateString()</p>
+                    </div>
                 }                    
-            </div>
-            <div>                    
                 @if (evento.Status == 1 && evento.Id == 3)
                 {
-                    <p>Evento @evento.Espaço.Nome <br> Dia @evento.DataDoEvento.ToShortDateString()</p>                    
+                    <div>                    
+                        <p>Evento @evento.Espaço.Nome <br> Dia @evento.DataDoEvento.ToShortDateString()</p>                    
+                    </div>
                 }                    
-            </div>
         }
         </div>
-    }else
-    {
-        <br>
-        <br>
-        <br>
-            <div id="feed-buttom">
-                <button class="button-feedback" onclick="openForm()">
-                    <span>
-                        Faça seu Rolê Top
-                    </span>
-                </button>
-            </div>
-        <hr>
-    }
 <br>
 <br>
 <br>
@@ -95,6 +81,22 @@
         </button>
     </div>
 <hr>
+    }else
+    {
+        <h2>Nenhum evento no momento</h2>
+<br>
+<br>
+<br>
+            <div id="feed-buttom">
+                <button class="button-feedback" onclick="openForm()">
+                    <span>
+                        Faça seu Rolê Top
+                    </span>
+                </button>
+            </div>
+        <hr>
+    }
+
 
 </main>
 <!-- &*&*&*&*&*&*&*&*&*& MAIN - FIM *&*&*&*&*&*&*&*&*&* -->
