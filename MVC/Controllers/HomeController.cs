@@ -13,15 +13,17 @@ namespace MVC.Controllers
 {
     public class HomeController : AbstractController
     {
+        EventoRepository eventoRepository = new EventoRepository();
         private UserRepository userRepository = new UserRepository();
         public IActionResult Index()
         {
-            return View (new BaseViewModel()
-            {
-                NomeView = "Home",
-                UsuarioEmail = ObterUsuarioSession(),
-                UsuarioNome = ObterUsuarioNomeSession()
-            });
+            EventoViewModel pvm = new EventoViewModel();
+            pvm.Eventos = eventoRepository.ObterTodos();
+
+                pvm.NomeView = "Home";
+                pvm.UsuarioEmail = ObterUsuarioSession();
+                pvm.UsuarioNome = ObterUsuarioNomeSession();
+                return View (pvm);
         }
         public IActionResult Privacy()
         {

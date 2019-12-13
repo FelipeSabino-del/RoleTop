@@ -82,6 +82,11 @@ nav{
     margin: 15px 0 0 45px;
 }
 
+.fa-bars:before {
+  content: "\f0c9";
+  padding: 0.1em;
+}
+
 /* POPUP LOGIN */
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
@@ -511,7 +516,10 @@ img {vertical-align: middle; z-index: -1;}
 
   .linha, #linha-contato{
     border-right: none;
-    font-size: 35px
+    font-size: 35px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    border-bottom: 2px solid white;
   }
   
   #teste{

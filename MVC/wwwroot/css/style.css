@@ -79,6 +79,11 @@ nav{
     transition: 0.4s;
   }
 
+  .fa-bars:before {
+    content: "\f0c9";
+    padding: 0.1em;
+  }
+
 #logo{
     height: 10em;
     margin: 15px 0 0 45px;
@@ -242,7 +247,11 @@ nav{
 }
 
 #jef p{
-  font-size: 3em;
+  font-size: 2em;
+    border: 4px #ffc600;
+    border-style: double;
+    text-align: center;
+    text-decoration: underline;
 }
 
 #comentario{
@@ -465,7 +474,10 @@ img {vertical-align: middle; z-index: -1;}
 
   .linha, #linha-contato{
     border-right: none;
-    font-size: 35px
+    font-size: 35px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    border-bottom: 2px solid white;
   }
   
   #teste{
@@ -486,16 +498,20 @@ img {vertical-align: middle; z-index: -1;}
   }
 
   #logo-pe{
-    padding-right: 12em;
+    padding-right: 2em;
   }
 
   #contato{
-    padding: 2em 5em 0 0;
+    padding: 3em 0 1em 2em;
   }
 
   #icon-rodape img{
-    transform: translateX(-125%);
     align-items: center;
+  }
+
+  iframe{
+    width: 100%;
+    padding-top: 2em;
   }
 
 }
@@ -503,9 +519,6 @@ img {vertical-align: middle; z-index: -1;}
 @media screen and (max-width: 580px) {
   #teste {
     padding: 20px 10px !important;
-  }
-  #logo{
-    padding-bottom: 5em;
   }
 }
 
