@@ -1,5 +1,0 @@
-tipo_usuario=0;nome=Administrador;email=admin@admin.com;senha=admin123;cpf=;telefone=;data_nascimento=01/09/2000 00:00:00
-tipo_usuario=1;nome=Felipe;email=felipedomingos2011@hotmail.com;senha=gss123;cpf=48417687858;telefone=987987987;data_nascimento=01/09/2000 00:00:00
-tipo_usuario=1;nome=Guilherme;email=email@email.com;senha=gss123;cpf=48417687858;telefone=9897949596;data_nascimento=10/10/1010 00:00:00
-tipo_usuario=1;nome=Casco;email=casco@email.com;senha=gss123;cpf=32132132132;telefone=32132132132;data_nascimento=12/12/1212 00:00:00
-tipo_usuario=1;nome=teste;email=teste@email.com;senha=gss123;cpf=98798798798;telefone=6635465498416;data_nascimento=12/12/2000 00:00:00
